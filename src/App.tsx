@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import './App.css'
 import type { FormValues, SectionDef, Preset } from './types/prompt'
 import { presets } from './presets/presets'
-import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons'
+import {  ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 
 const App = () => {
   const { t } = useTranslation()
@@ -258,7 +258,7 @@ const App = () => {
         <Typography.Title level={2} style={{ margin: 0, color: 'white' }} className='bbh'>{t('title')}</Typography.Title>
         <Button onClick={() => setPresetsCollapsed((v) => !v)} style={{ display: 'flex', alignItems: 'center', gap: 8 }} size='small' ghost>
           <span>{t('presets')}</span>
-         {presetsCollapsed ? <ArrowDownOutlined /> : <ArrowUpOutlined />}
+         {presetsCollapsed ? <ArrowRightOutlined /> : <ArrowLeftOutlined />}
         </Button>
         
         </div>
