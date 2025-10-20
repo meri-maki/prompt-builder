@@ -14,6 +14,16 @@ import prompt12Img from '../assets/prompt12.webp'
 import prompt13Img from '../assets/prompt13.png'
 import prompt14Img from '../assets/prompt14.webp'
 import prompt15Img from '../assets/prompt15.webp'
+import prompt16Img from '../assets/prompt16.png'
+import prompt17Img from '../assets/prompt17.png'
+import prompt18Img from '../assets/prompt18.png'
+import prompt19Img from '../assets/prompt19.png'
+import prompt20Img from '../assets/prompt20.png'
+import prompt21Img from '../assets/prompt21.png'
+import prompt22Img from '../assets/prompt22.png'
+import prompt23Img from '../assets/prompt23.png'
+import prompt24Img from '../assets/prompt24.png'
+import prompt25Img from '../assets/prompt25.png'
 
 export const presets: Preset[] = [
   {
@@ -701,6 +711,466 @@ export const presets: Preset[] = [
       },
       style: {
         visualAesthetic: 'Clean corporate style, minimalistic and formal'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt16',
+    title: 'Preset 16',
+    img: prompt16Img,
+    values: {
+      shot: {
+        composition: 'Close-up portrait, subject centered, slight low-angle, 85 mm lens',
+        cameraSettings: 'ISO 400, f/1.8, 1/200 s, full-frame sensor',
+        filmGrain: 'Minimal grain, clean image'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and upper torso, natural skin texture visible',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth, blurred black background'
+      },
+      subject: {
+        description: 'Person with long black hair, red eyes, open mouth showing vampire-like sharp fangs, intense expression',
+        wardrobe: 'Light blue sleeveless tank top, black ribbon choker with silver chain and small pendant',
+        grooming: 'Natural skin, slightly flushed cheeks, subtle shine on skin'
+      },
+      scene: {
+        location: 'Studio or dark undefined setting',
+        timeOfDay: 'Night or artificially lit environment',
+        environment: 'Completely black background, no visible objects'
+      },
+      visualDetails: {
+        action: 'Person shouting or growling, hair partially moving',
+        props: 'Black ribbon tied around neck with silver chain necklace, pendant',
+        physics: 'Hair strands slightly lifted, natural skin highlights'
+      },
+      cinematography: {
+        lighting: 'Hard directional front light creating shadows and highlights on face and chest, high contrast',
+        tone: 'Dramatic, intense, edgy',
+        colorPalette: 'Muted blues, natural skin tones, black background, slight red accents in eyes'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Dark dramatic portrait, horror/vampire theme, high contrast'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt17',
+    title: 'Preset 17',
+    img: prompt17Img,
+    values: {
+      shot: {
+        composition: 'Medium shot, figure centered amid flowing grass, flowers framing bottom corners',
+        cameraSettings: 'Low shutter speed intentionally blurred motion, medium focal length around 50 mm',
+        filmGrain: 'Smooth, minimal grain'
+      },
+      lensEffects: {
+        optics: 'Soft focus due to motion blur',
+        artifacts: 'None',
+        depthOfField: 'Moderate depth of field keeping grass and flowers distinct'
+      },
+      subject: {
+        description: 'Person dressed in flowing white garment, blurred mid-motion running or moving fast left to right',
+        wardrobe: 'Loose, long white dress or robe, no visible patterns',
+        grooming: 'Hair styled in bun'
+      },
+      scene: {
+        location: 'Grassy field with tall, flowing green grass and clusters of dense, bright coral-pink flowers',
+        timeOfDay: 'Indeterminate, dark solid background suggests studio or night-time artificially lit',
+        environment: 'Calm natural field contrasting with strong figure movement'
+      },
+      visualDetails: {
+        action: 'Person appears to be running quickly through grass',
+        props: 'None',
+        physics: 'Air movement causes grass to bend and flow dynamically'
+      },
+      cinematography: {
+        lighting: 'Soft, even lighting focused on subject and grass',
+        tone: 'Dreamlike, surreal',
+        colorPalette: 'Deep navy background, vivid green grass, coral-pink flowers, bright white clothing'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Surreal, ethereal, painterly with motion blur emphasis'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt18',
+    title: 'Preset 18',
+    img: prompt18Img,
+    values: {
+      shot: {
+        composition: 'Wide-angle medium shot, multiple figures evenly spaced in golden dry grass field, rustic hut centered in background',
+        cameraSettings: 'ISO 400, f/4, 1/125 sec, natural light',
+        filmGrain: 'Slight analog film texture, noticeable grain'
+      },
+      lensEffects: {
+        optics: 'Slight peripheral softness, sharp focus on middle subjects',
+        artifacts: 'None',
+        depthOfField: 'Moderate depth, background trees slightly blurred'
+      },
+      subject: {
+        description: 'Eight identical young women with short black hair, wearing puffy white textured sweaters and black skirts, black knee-high boots, various standing and crouching poses',
+        wardrobe: 'Puffy white feathered or fringed sweaters, short black skirts, black boots',
+        grooming: 'Short black hair, natural makeup'
+      },
+      scene: {
+        location: 'Open field with tall dry golden grass, small white rustic hut with worn roof, dense dark green conifer trees in background',
+        timeOfDay: 'Overcast daylight, soft diffused lighting',
+        environment: 'Dry field, slightly overcast sky, rustic rural setting'
+      },
+      visualDetails: {
+        action: 'Figures arranged in semi-circle facing various directions, one figure in front raising arms covering face',
+        props: 'Dilapidated hut with open window and door in background',
+        physics: 'Still scene, no motion blur, natural wind effect in grass'
+      },
+      cinematography: {
+        lighting: 'Soft natural overcast light, even illumination, muted shadows',
+        tone: 'Earthy, muted, slightly desaturated warm tones',
+        colorPalette: 'Golden brown, off-white, dark green, black'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Surreal, ethereal, minimalist, naturalistic with subtle artistic expression'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt19',
+    title: 'Preset 19',
+    img: prompt19Img,
+    values: {
+      shot: {
+        composition: 'Eye-level medium wide, 35 mm lens, model and yak centered foreground with lake and mountains backdrop',
+        cameraSettings: 'ISO 100, f/5.6, 1/200 s, daylight balanced full-frame sensor',
+        filmGrain: 'Clean, smooth digital finish'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on model and yak with subtle background softness',
+        artifacts: 'None visible',
+        depthOfField: 'Moderate depth captured, background slightly blurred'
+      },
+      subject: {
+        description: 'Asian female model with slicked black hair, neutral expression, standing close to large white yak with curved dark horns',
+        wardrobe: 'Oversized textured black fur coat, beige pants, cream fuzzy leg warmers with black trim',
+        grooming: 'Hair tightly slicked back, natural makeup'
+      },
+      scene: {
+        location: 'Rocky lakeshore with turquoise water, snow-capped mountains in distant background',
+        timeOfDay: 'Mid-morning, clear sunny sky with scattered clouds',
+        environment: 'Fresh outdoor mountain lake setting with natural light'
+      },
+      visualDetails: {
+        action: 'Model gently touching side of face while leaning on yak',
+        props: 'None beyond natural elements',
+        physics: 'Soft lake waves lapping rocky shoreline'
+      },
+      cinematography: {
+        lighting: 'Natural sunlight from front-left creating soft natural shadows',
+        tone: 'Earthy and natural mood, balanced contrast',
+        colorPalette: 'Neutral tones, whites, blacks, earthy rocks, blue-green water'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'High fashion editorial with natural wildlife integration, minimalist and serene atmosphere'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt20',
+    title: 'Preset 20',
+    img: prompt20Img,
+    values: {
+      shot: {
+        composition: 'Centered vertical medium full-body shot, eye-level, model seated on simple white folding chair against textured concrete wall',
+        cameraSettings: 'ISO 400, f/2.8, 1/125 s, 85 mm lens',
+        filmGrain: 'Smooth digital image with slight natural texture'
+      },
+      lensEffects: {
+        optics: 'Crisp focus on model, subtle background texture in mild blur',
+        artifacts: 'None',
+        depthOfField: 'Shallow, model fully in focus, background softly blurred'
+      },
+      subject: {
+        description: 'Female model with pale skin, straight dark hair parted center, neutral intense expression, slender build seated with legs crossed',
+        wardrobe: 'Long dark olive coat reaching floor, faux fur tiger print shawl draped asymmetrically over shoulders, sheer black stockings with back seam, pointed dark brown heels, small black handbag',
+        grooming: 'Straight hair loosely styled, minimal natural makeup, small white earrings'
+      },
+      scene: {
+        location: 'Urban outdoor sidewalk with rough gray concrete wall backdrop',
+        timeOfDay: 'Overcast midday with diffused daylight',
+        environment: 'Neutral urban setting, minimalistic and slightly weathered'
+      },
+      visualDetails: {
+        action: 'Model sitting with legs crossed clasping hands over knee, direct gaze at camera',
+        props: 'White folding chair, black handbag',
+        physics: 'Natural relaxed posture, subtle folds in fabric'
+      },
+      cinematography: {
+        lighting: 'Soft diffused natural light, neutral shadows, no harsh contrast',
+        tone: 'Cool toned, moody but refined',
+        colorPalette: 'Muted earth tones brown, dark olive, gray, black, warm tiger print accents'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Modern high fashion editorial style, minimalist urban, sophisticated and moody'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt21',
+    title: 'Preset 21',
+    img: prompt21Img,
+    values: {
+      shot: {
+        composition: 'Low angle close-up from ground, two men filling frame with blue sky and building background',
+        cameraSettings: 'Bright daylight, high ISO, f/8 for sharp focus',
+        filmGrain: 'Prominent grain, vintage film texture'
+      },
+      lensEffects: {
+        optics: 'Wide-angle lens distortion',
+        artifacts: 'Slight chromatic aberration on edges',
+        depthOfField: 'Deep focus, both men sharply detailed'
+      },
+      subject: {
+        description: 'Two men in black suits with white shirts and black ties, one light-skinned with shoulder-length hair smiling, one dark-skinned with afro hairstyle holding a revolver, serious expression',
+        wardrobe: 'Classic 1960s-style black suit and tie, white dress shirts',
+        grooming: 'Neatly groomed, afro and sideburns on darker man, clean-shaven on lighter man'
+      },
+      scene: {
+        location: 'Urban outdoor with visible white building walls',
+        timeOfDay: 'Midday with bright sunlight',
+        environment: 'Clear blue sky, shadows cast on men\'s faces'
+      },
+      visualDetails: {
+        action: 'Dark-skinned man loading or holding gun, lighter man observing with slight smile',
+        props: 'Revolver handgun, gold wrist bracelet',
+        physics: 'Natural bright light and shadow interplay on faces and clothing'
+      },
+      cinematography: {
+        lighting: 'Harsh key light from sun, strong shadows',
+        tone: 'Slightly warm vintage tone',
+        colorPalette: 'Blues, blacks, whites, skin tones, gold accent'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Gritty 1960s crime film look, bold and iconic composition'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt22',
+    title: 'Preset 22',
+    img: prompt22Img,
+    values: {
+      shot: {
+        composition: 'Low angle, wide lens capturing foreground human and car with background collapsing building',
+        cameraSettings: 'ISO 400, f/5.6, 1/500 s, natural light',
+        filmGrain: 'Minimal grain, sharp focus'
+      },
+      lensEffects: {
+        optics: 'Wide-angle lens distortion slightly visible on edges',
+        artifacts: 'None noticeable',
+        depthOfField: 'Deep focus, all elements sharp'
+      },
+      subject: {
+        description: 'Woman with blonde hair, walking away from camera, wearing a long shiny teal coat and black pants',
+        wardrobe: 'Glossy teal long coat, dark textured pants, no visible footwear details',
+        grooming: 'Medium-length blonde hair, subtle natural makeup'
+      },
+      scene: {
+        location: 'Open gravel field with bushes and sparse trees, distant urban area',
+        timeOfDay: 'Midday, bright sunlight',
+        environment: 'Clear sky, dusty air from explosion'
+      },
+      visualDetails: {
+        action: 'Large concrete building mid-collapse with debris and dust clouds',
+        props: 'Classic black four-door sedan car parked on gravel',
+        physics: 'Dust and smoke billowing realistically as building fragments fall'
+      },
+      cinematography: {
+        lighting: 'High-key natural sunlight casting clear shadows',
+        tone: 'Dramatic, intense with warm earthy tones',
+        colorPalette: 'Earthy browns, greens, greys with teal accent'
+      },
+      textElements: {
+        visibleText: 'License plate on car with characters "42-29-91"',
+        typography: 'Standard license plate typeface',
+        placement: 'Rear bumper of vehicle'
+      },
+      style: {
+        visualAesthetic: 'Cinematic realism with suspenseful mood and dynamic action'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt23',
+    title: 'Preset 23',
+    img: prompt23Img,
+    values: {
+      shot: {
+        composition: 'Eye-level medium full-body shot, subject centered against lockers, blurred figures passing left and right',
+        cameraSettings: 'ISO 400, f/4, 1/30 s for motion blur',
+        filmGrain: 'Moderate grain typical of 1980s film'
+      },
+      lensEffects: {
+        optics: 'Slight soft focus, motion blur on peripheral figures',
+        artifacts: 'None noticeable',
+        depthOfField: 'Deep focus on central figure and lockers, blur on moving figures'
+      },
+      subject: {
+        description: 'Teenage girl with shoulder-length wavy brown hair, neutral expression, standing still',
+        wardrobe: 'Black long coat, grey patterned skirt, black scarf with white print, white socks, black shoes, large grey crossbody bag',
+        grooming: 'Natural look, no makeup visible'
+      },
+      scene: {
+        location: 'School hallway interior with mustard yellow lockers',
+        timeOfDay: 'Daytime, indoor fluorescent lighting',
+        environment: 'School corridor, busy with motion'
+      },
+      visualDetails: {
+        action: 'Girl standing stationary with hands behind back; two blurred teenagers running past',
+        props: 'Lockers, crossbody bag',
+        physics: 'Motion blur effect on moving figures'
+      },
+      cinematography: {
+        lighting: 'Flat even fluorescent lighting typical of school hallway',
+        tone: 'Somber, isolated mood',
+        colorPalette: 'Muted yellows, blacks, blues, greys'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: '1980s film still, naturalistic, slightly grainy realistic tone'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt24',
+    title: 'Preset 24',
+    img: prompt24Img,
+    values: {
+      shot: {
+        composition: 'Low-angle action shot capturing skier mid-jump with skis angled forward and snow splashing below',
+        cameraSettings: 'High shutter speed to freeze motion, medium telephoto lens',
+        filmGrain: 'Moderate grain typical of black-and-white film'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on skier with slightly blurred snow particles in foreground',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth of field isolating subject against blurred background'
+      },
+      subject: {
+        description: 'Female skier wearing sunglasses, braided hair flying backward, focused expression, mid-air jump pose',
+        wardrobe: 'Cable knit turtleneck sweater, loose-fitting ski pants, ski boots with bindings',
+        grooming: 'Hair neatly braided in two pigtails, clean skin'
+      },
+      scene: {
+        location: 'Snowy mountainous terrain with fresh powder',
+        timeOfDay: 'Bright daylight',
+        environment: 'Clear sky with contrasty light'
+      },
+      visualDetails: {
+        action: 'Skier launching into air off snow jump, skis angled upwards, snow dramatically spraying',
+        props: 'Pair of skis, ski poles gripped in hands',
+        physics: 'Snow particles caught mid-air, dynamic airborne pose'
+      },
+      cinematography: {
+        lighting: 'High-contrast natural sunlight creating sharp shadows',
+        tone: 'Dramatic black and white monochrome',
+        colorPalette: 'Grayscale black, white, and shades of gray'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Classic vintage black-and-white sports photography capturing motion and energy'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt25',
+    title: 'Preset 25',
+    img: prompt25Img,
+    values: {
+      shot: {
+        composition: 'Medium portrait shot, subject centered, outdoors with horizon line',
+        cameraSettings: 'Natural light, moderate ISO for daylight, shallow focus',
+        filmGrain: 'Visible grain and slight aging discoloration'
+      },
+      lensEffects: {
+        optics: 'Soft focus with slight vignette',
+        artifacts: 'Light flare and color fade damage on edges',
+        depthOfField: 'Shallow depth with blurred background'
+      },
+      subject: {
+        description: 'Bearded man with long dark hair wearing knitted beige hat, holding white lamb',
+        wardrobe: 'Dark heavy coat or jacket, brown pants',
+        grooming: 'Full beard, natural unstyled hair'
+      },
+      scene: {
+        location: 'Rural outdoor setting, grassy field with trees and hills in distance',
+        timeOfDay: 'Late afternoon or overcast daylight',
+        environment: 'Earthy tones, cool ambient lighting'
+      },
+      visualDetails: {
+        action: 'Man holding lamb close to chest with both hands',
+        props: 'Cigarette in man\'s mouth',
+        physics: 'Lamb appears calm and stable in arms'
+      },
+      cinematography: {
+        lighting: 'Diffused natural light, soft shadows',
+        tone: 'Nostalgic and warm despite cooler colors',
+        colorPalette: 'Muted earthy browns, greens, and creams'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Vintage, rustic, candid, rural portrait'
       }
     }
   }

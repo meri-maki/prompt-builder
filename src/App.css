@@ -6,3 +6,21 @@
 	height: 100%;
 	width: 100%;
 }
+
+/* Light scrollbar styling for modal */
+.ant-modal-body::-webkit-scrollbar {
+	width: 12px;
+}
+
+.ant-modal-body::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.ant-modal-body::-webkit-scrollbar-thumb {
+	background: #d0d0d0;
+	border-radius: 6px;
+}
+
+.ant-modal-body::-webkit-scrollbar-thumb:hover {
+	background: #b0b0b0;
+}
