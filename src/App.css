@@ -24,3 +24,13 @@
 .ant-modal-body::-webkit-scrollbar-thumb:hover {
 	background: #b0b0b0;
 }
+
+.float-button {
+	width: fit-content !important;
+
+	.ant-float-btn-content {
+		width: fit-content !important;
+
+		padding: 12px !important;
+	}
+}

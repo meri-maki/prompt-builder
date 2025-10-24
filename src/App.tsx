@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import './App.css'
 import type { FormValues, SectionDef, Preset } from './types/prompt'
 import { presets } from './presets/presets'
-import { CopyOutlined, DeleteOutlined, FileAddOutlined, GlobalOutlined } from '@ant-design/icons'
+import { CopyOutlined, DeleteOutlined, FileAddOutlined, GlobalOutlined, FileTextOutlined } from '@ant-design/icons'
 
 const App = () => {
   const { t, i18n } = useTranslation()
@@ -14,6 +14,18 @@ const App = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [selectedPreset, setSelectedPreset] = useState<Preset | null>(null)
   const [selectedSections, setSelectedSections] = useState<string[]>([
+    'shot',
+    'lensEffects',
+    'subject',
+    'scene',
+    'visualDetails',
+    'cinematography',
+    'textElements',
+    'style'
+  ])
+  const [pasteModalVisible, setPasteModalVisible] = useState(false)
+  const [parsedData, setParsedData] = useState<Partial<FormValues> | null>(null)
+  const [pasteSelectedSections, setPasteSelectedSections] = useState<string[]>([
     'shot',
     'lensEffects',
     'subject',
@@ -156,6 +168,45 @@ const App = () => {
       setSelectedSections(allSections)
     }
   }, [selectedSections])
+
+  const handlePasteModalOk = useCallback(() => {
+    if (!parsedData) return
+    
+    const valuesToApply: Partial<FormValues> = {}
+    pasteSelectedSections.forEach((sectionKey) => {
+      const sectionValue = parsedData[sectionKey as keyof FormValues]
+      if (sectionValue) {
+        (valuesToApply as Record<string, unknown>)[sectionKey] = sectionValue
+      }
+    })
+    
+    form.setFieldsValue(valuesToApply as FormValues)
+    message.success(t('pasteSuccess'))
+    setPasteModalVisible(false)
+    setParsedData(null)
+  }, [parsedData, pasteSelectedSections, form, t, message])
+
+  const handlePasteModalCancel = useCallback(() => {
+    setPasteModalVisible(false)
+    setParsedData(null)
+  }, [])
+
+  const handlePasteSectionToggle = useCallback((sectionKey: string) => {
+    setPasteSelectedSections(prev => 
+      prev.includes(sectionKey) 
+        ? prev.filter(k => k !== sectionKey)
+        : [...prev, sectionKey]
+    )
+  }, [])
+
+  const handlePasteSelectAll = useCallback(() => {
+    const allSections = ['shot', 'lensEffects', 'subject', 'scene', 'visualDetails', 'cinematography', 'textElements', 'style']
+    if (pasteSelectedSections.length === allSections.length) {
+      setPasteSelectedSections([])
+    } else {
+      setPasteSelectedSections(allSections)
+    }
+  }, [pasteSelectedSections])
 
   const buildOutput = useCallback((values: FormValues) => {
     const lines: string[] = []
@@ -308,12 +359,108 @@ const App = () => {
         message.error(t('noDataParsed'))
         return
       }
+      
+      // Apply all parsed data directly
       form.setFieldsValue(found as FormValues)
       message.success(t('pasteSuccess'))
     } catch {
       message.error(t('pasteClipboardFailed'))
     }
   }, [form, t, message])
+
+  const parseClipboardToFormPartial = useCallback(async () => {
+    try {
+      const text = await navigator.clipboard.readText()
+      
+      if (!text || text.trim().length === 0) {
+        message.error(t('clipboardEmpty'))
+        return
+      }
+
+      // Simple section-based parse using labels we render
+      const sectionMap: Record<string, keyof FormValues> = {
+        'SHOT': 'shot',
+        'LENS EFFECTS': 'lensEffects',
+        'SUBJECT': 'subject',
+        'SCENE': 'scene',
+        'VISUAL DETAILS': 'visualDetails',
+        'CINEMATOGRAPHY': 'cinematography',
+        'TEXT ELEMENTS': 'textElements',
+        'STYLE': 'style',
+      }
+
+      const fieldLabelToKey: Record<string, string> = {
+        'Composition': 'composition',
+        'Camera Settings': 'cameraSettings',
+        'Film Grain': 'filmGrain',
+        'Optics': 'optics',
+        'Artifacts': 'artifacts',
+        'Depth of Field': 'depthOfField',
+        'Description': 'description',
+        'Wardrobe': 'wardrobe',
+        'Grooming': 'grooming',
+        'Location': 'location',
+        'Time of Day': 'timeOfDay',
+        'Environment': 'environment',
+        'Action': 'action',
+        'Props': 'props',
+        'Physics': 'physics',
+        'Lighting': 'lighting',
+        'Tone': 'tone',
+        'Color Palette': 'colorPalette',
+        'Visible Text': 'visibleText',
+        'Typography': 'typography',
+        'Placement': 'placement',
+        'Visual Aesthetic': 'visualAesthetic',
+      }
+
+      // Split into sections by known headers
+      const found: Partial<FormValues> = {}
+      const sectionRegex = /(SHOT|LENS EFFECTS|SUBJECT|SCENE|VISUAL DETAILS|CINEMATOGRAPHY|TEXT ELEMENTS|STYLE):/g
+      const indices: { name: string; start: number; end: number }[] = []
+      let m: RegExpExecArray | null
+      while ((m = sectionRegex.exec(text)) !== null) {
+        indices.push({ name: m[1], start: m.index, end: 0 })
+      }
+      if (indices.length === 0) {
+        message.error(t('noValidSections'))
+        return
+      }
+      indices.forEach((s, i) => { s.end = i < indices.length - 1 ? indices[i + 1].start : text.length })
+      for (const sec of indices) {
+        const rawSection = text.slice(sec.start, sec.end)
+        const sectionName = sec.name
+        const sectionKey = sectionMap[sectionName]
+        if (!sectionKey) continue
+
+        // Extract bullets like: • Label: value
+        const itemRegex = /•\s*([^:]+):\s*([^•\n\r]+)/g
+        const sectionObj: Record<string, string> = {}
+        let it: RegExpExecArray | null
+        while ((it = itemRegex.exec(rawSection)) !== null) {
+          const label = it[1].trim()
+          const value = it[2].trim()
+          const key = fieldLabelToKey[label]
+          if (key) sectionObj[key] = value
+        }
+        if (Object.keys(sectionObj).length > 0) {
+          (found as Record<string, unknown>)[sectionKey] = sectionObj as unknown
+        }
+      }
+
+      if (Object.keys(found).length === 0) {
+        message.error(t('noDataParsed'))
+        return
+      }
+      
+      // Show paste confirmation modal for partial paste
+      setParsedData(found)
+      setPasteSelectedSections(Object.keys(found) as string[])
+      setPasteModalVisible(true)
+    } catch {
+      message.error(t('pasteClipboardFailed'))
+    }
+  }, [t, message])
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -424,25 +571,36 @@ const App = () => {
 
       <FloatButton
         icon={<FileAddOutlined style={{ }} />}
-        tooltip={<span style={{ fontSize: '14px' }}>{t('paste')}</span>}
         onClick={parseClipboardToForm}
-        style={{ right: 24, bottom: 220, width: 60, height: 60 }}
-        shape="circle"
+        style={{ right: 24, bottom: 250 }}
+        shape="square"
+        className='float-button'
+        description={<span style={{ fontSize: '14px' }}>{t('paste')}</span>}
+      />
+      <FloatButton
+        icon={<FileTextOutlined style={{ }} />}
+        onClick={parseClipboardToFormPartial}
+        style={{ right: 24, bottom: 180}}
+        shape="square"
+        className='float-button'
+        description={<span style={{ fontSize: '14px' }}>{t('partialPaste')}</span>}
       />
       <FloatButton
         icon={<DeleteOutlined style={{ color: '#ff4d4f'}} />}
-        tooltip={<span style={{ fontSize: '14px' }}>{t('reset')}</span>}
         onClick={onReset}
-        style={{ right: 24, bottom: 140, width: 60, height: 60 }}
-        shape="circle"
+        style={{ right: 24, bottom: 110 }}
+        shape="square"
+        className='float-button'
+        description={<span style={{ fontSize: '14px' }}>{t('reset')}</span>}
       />
       <FloatButton
         icon={<CopyOutlined style={{ }} />}
-        tooltip={<span style={{ fontSize: '14px' }}>{t('copy')}</span>}
         type="primary"
         onClick={handleRenderAndCopy}
-        style={{ right: 24, bottom: 60, width: 60, height: 60 }}
-        shape="circle"
+        style={{ right: 24, bottom: 40 }}
+        shape="square"
+        className='float-button'
+        description={<span style={{ fontSize: '14px' }}>{t('copy')}</span>}
       />
 
       <Modal
@@ -475,6 +633,60 @@ const App = () => {
                 <span style={{ fontSize: '16px' }}>{section.label}</span>
               </Checkbox>
             ))}
+          </Space>
+        </Space>
+      </Modal>
+
+      <Modal
+        title={<span style={{ fontSize: '20px' }}>{t('selectSectionsToPaste')}</span>}
+        open={pasteModalVisible}
+        onOk={handlePasteModalOk}
+        onCancel={handlePasteModalCancel}
+        okText={t('applySelected')}
+        cancelText={t('cancel')}
+        width={800}
+      >
+        <Space direction="vertical" style={{ width: '100%', fontSize: '16px' }}>
+          <Checkbox
+            checked={pasteSelectedSections.length === sections.length}
+            indeterminate={pasteSelectedSections.length > 0 && pasteSelectedSections.length < sections.length}
+            onChange={handlePasteSelectAll}
+            style={{ fontSize: '16px' }}
+          >
+            <strong style={{ fontSize: '16px' }}>{t('selectAll')}</strong>
+          </Checkbox>
+          <Divider style={{ margin: '12px 0' }} />
+          <Space direction="vertical" style={{ width: '100%' }}>
+            {sections.map((section) => {
+              const sectionData = parsedData?.[section.key as keyof FormValues] as Record<string, string> | undefined
+              const hasContent = sectionData && Object.values(sectionData).some(value => value && value.trim())
+              
+              if (!hasContent) return null
+              
+              return (
+                <div key={section.key} style={{ border: '1px solid #d9d9d9', borderRadius: '8px', padding: '12px', marginBottom: '8px' }}>
+                  <Checkbox
+                    checked={pasteSelectedSections.includes(section.key)}
+                    onChange={() => handlePasteSectionToggle(section.key)}
+                    style={{ fontSize: '16px', marginBottom: '8px' }}
+                  >
+                    <span style={{ fontSize: '16px', fontWeight: 600 }}>{section.label}</span>
+                  </Checkbox>
+                  <div style={{ marginLeft: '24px', fontSize: '14px', color: '#666' }}>
+                    {section.fields.map((field) => {
+                      const value = sectionData?.[field.key]
+                      if (!value || !value.trim()) return null
+                      
+                      return (
+                        <div key={field.key} style={{ marginBottom: '4px' }}>
+                          <strong>{field.label}:</strong> {value}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
           </Space>
         </Space>
       </Modal>
