@@ -24,6 +24,31 @@ import prompt22Img from '../assets/prompt22.png'
 import prompt23Img from '../assets/prompt23.png'
 import prompt24Img from '../assets/prompt24.png'
 import prompt25Img from '../assets/prompt25.png'
+import prompt26Img from '../assets/prompt26.png'
+import prompt27Img from '../assets/prompt27.png'
+import prompt28Img from '../assets/prompt28.png'
+import prompt29Img from '../assets/prompt29.png'
+import prompt30Img from '../assets/prompt30.png'
+import prompt31Img from '../assets/prompt31.png'
+import prompt32Img from '../assets/prompt32.png'
+import prompt33Img from '../assets/prompt33.png'
+import prompt34Img from '../assets/prompt34.png'
+import prompt35Img from '../assets/prompt35.png'
+import prompt36Img from '../assets/prompt36.png'
+import prompt37Img from '../assets/prompt37.png'
+import prompt38Img from '../assets/prompt38.png'
+import prompt39Img from '../assets/prompt39.png'
+import prompt40Img from '../assets/prompt40.png'
+import prompt41Img from '../assets/prompt41.png'
+import prompt42Img from '../assets/prompt42.png'
+import prompt43Img from '../assets/prompt43.png'
+import prompt44Img from '../assets/prompt44.png'
+import prompt45Img from '../assets/prompt45.png'
+import prompt46Img from '../assets/prompt46.png'
+import prompt47Img from '../assets/prompt47.png'
+import prompt48Img from '../assets/prompt48.png'
+import prompt49Img from '../assets/prompt49.png'
+import prompt50Img from '../assets/prompt50.png'
 
 export const presets: Preset[] = [
   {
@@ -121,6 +146,7 @@ export const presets: Preset[] = [
     id: 'prompt3',
     title: 'Preset 3',
     img: prompt3Img,
+    tags: ['bw'],
     values: {
       shot: {
         composition: 'extreme close-up of model in motion, center framed, blurred motion effect',
@@ -489,6 +515,7 @@ export const presets: Preset[] = [
     id: 'prompt11',
     title: 'Preset 11',
     img: prompt11Img,
+    tags: ['bw'],
     values: {
       shot: {
         composition: 'Split-frame diptych with one full-body seated and one close-up portrait, subject centered',
@@ -581,6 +608,7 @@ export const presets: Preset[] = [
     id: 'prompt13',
     title: 'Preset 13',
     img: prompt13Img,
+    tags: ['faceless'],
     values: {
       shot: {
         composition: 'Side view medium shot, subject centered, chair profile visible',
@@ -627,6 +655,7 @@ export const presets: Preset[] = [
     id: 'prompt14',
     title: 'Preset 14',
     img: prompt14Img,
+    tags: ['faceless'],
     values: {
       shot: {
         composition: 'Rear medium shot centered on subject in theater seating',
@@ -765,6 +794,7 @@ export const presets: Preset[] = [
     id: 'prompt17',
     title: 'Preset 17',
     img: prompt17Img,
+    tags: ['faceless'],
     values: {
       shot: {
         composition: 'Medium shot, figure centered amid flowing grass, flowers framing bottom corners',
@@ -811,6 +841,7 @@ export const presets: Preset[] = [
     id: 'prompt18',
     title: 'Preset 18',
     img: prompt18Img,
+    tags: ['faceless'],
     values: {
       shot: {
         composition: 'Wide-angle medium shot, multiple figures evenly spaced in golden dry grass field, rustic hut centered in background',
@@ -949,6 +980,7 @@ export const presets: Preset[] = [
     id: 'prompt21',
     title: 'Preset 21',
     img: prompt21Img,
+    tags: ['male'],
     values: {
       shot: {
         composition: 'Low angle close-up from ground, two men filling frame with blue sky and building background',
@@ -995,6 +1027,7 @@ export const presets: Preset[] = [
     id: 'prompt22',
     title: 'Preset 22',
     img: prompt22Img,
+    tags: ['faceless'],
     values: {
       shot: {
         composition: 'Low angle, wide lens capturing foreground human and car with background collapsing building',
@@ -1087,6 +1120,7 @@ export const presets: Preset[] = [
     id: 'prompt24',
     title: 'Preset 24',
     img: prompt24Img,
+    tags: ['bw'],
     values: {
       shot: {
         composition: 'Low-angle action shot capturing skier mid-jump with skis angled forward and snow splashing below',
@@ -1133,6 +1167,7 @@ export const presets: Preset[] = [
     id: 'prompt25',
     title: 'Preset 25',
     img: prompt25Img,
+    tags: ['male'],
     values: {
       shot: {
         composition: 'Medium portrait shot, subject centered, outdoors with horizon line',
@@ -1171,6 +1206,1174 @@ export const presets: Preset[] = [
       },
       style: {
         visualAesthetic: 'Vintage, rustic, candid, rural portrait'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt26',
+    title: 'Preset 26',
+    img: prompt26Img,
+    tags: ['non-portrait', 'faceless'],
+    values: {
+      shot: {
+        composition: 'Centered medium shot, slight low angle, subject mid-ground, rocks in background',
+        cameraSettings: 'Low ISO, slow shutter speed for blur, wide aperture',
+        filmGrain: 'Noticeable grain, vintage texture'
+      },
+      lensEffects: {
+        optics: 'Soft focus on subject, sharp edges on rocks',
+        artifacts: 'Grain noise, slight chromatic aberration',
+        depthOfField: 'Shallow depth, background rocks slightly blurred'
+      },
+      subject: {
+        description: 'Single figure wearing a long white dress, black hair, facing away, barefoot',
+        wardrobe: 'Simple, flowing white dress',
+        grooming: 'Hair loose, natural'
+      },
+      scene: {
+        location: 'Outdoor rocky terrain, barren landscape',
+        timeOfDay: 'Night',
+        environment: 'Dark, starless sky, red light illuminating ground and rocks'
+      },
+      visualDetails: {
+        action: 'Figure walking forward, blurred motion',
+        props: 'None',
+        physics: 'Soft shadows cast on ground, light source low angle'
+      },
+      cinematography: {
+        lighting: 'Intense red spotlight from below, strong contrast',
+        tone: 'Surreal, eerie, mysterious',
+        colorPalette: 'Dominantly red and black with bright white'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Surreal, cinematic, high contrast, retro grainy vibe'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt27',
+    title: 'Preset 27',
+    img: prompt27Img,
+    tags: ['non-portrait', 'faceless'],
+    values: {
+      shot: {
+        composition: 'Central full-body figure with mountainous horizon; circular vignette framing',
+        cameraSettings: 'Low light setting, long exposure causing ghostly blur, high contrast',
+        filmGrain: 'Heavy grain with textured noise'
+      },
+      lensEffects: {
+        optics: 'Vignette creating tunnel vision effect',
+        artifacts: 'Light flare near figure\'s midsection',
+        depthOfField: 'Deep focus on background and figure blurred'
+      },
+      subject: {
+        description: 'Humanoid figure glowing white with hooded robe, casting shadow',
+        wardrobe: 'Flowing white robe with hood',
+        grooming: 'Indiscernible due to intense glow'
+      },
+      scene: {
+        location: 'Desert terrain with rocky hills',
+        timeOfDay: 'Night',
+        environment: 'Sparse vegetation, rugged ground, dark sky'
+      },
+      visualDetails: {
+        action: 'Static pose, slight motion blur',
+        props: 'None',
+        physics: 'Strong light source causing shadow and bright halo'
+      },
+      cinematography: {
+        lighting: 'Harsh red backlight with strong white glow on figure',
+        tone: 'Surreal, eerie, otherworldly',
+        colorPalette: 'Dominant reds, whites, and deep blacks'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Experimental, horror, paranormal vibe'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt28',
+    title: 'Preset 28',
+    img: prompt28Img,
+    values: {
+      shot: {
+        composition: 'Close-up side profile of face tilted back, clawed hand close to forehead',
+        cameraSettings: 'Soft focus, shallow depth, neutral exposure',
+        filmGrain: 'Smooth, minimal grain'
+      },
+      lensEffects: {
+        optics: 'Slight vignette, diffused edges',
+        artifacts: 'None',
+        depthOfField: 'Very shallow focusing on face and claw'
+      },
+      subject: {
+        description: 'Pale-skinned person with platinum blonde hair, eyes closed, serene expression, small black dot on forehead, claw hand with long black talons on neck and above face',
+        wardrobe: 'None visible',
+        grooming: 'Smooth, natural skin texture, slightly wavy hair'
+      },
+      scene: {
+        location: 'Indeterminate, plain light grey or white background',
+        timeOfDay: 'Indeterminate',
+        environment: 'Minimalistic, abstract'
+      },
+      visualDetails: {
+        action: 'Clawed hand reaching near forehead, fingers spread slightly',
+        props: 'None',
+        physics: 'Soft lighting creating subtle shadows on skin and claws'
+      },
+      cinematography: {
+        lighting: 'Soft, high-key lighting from front or side',
+        tone: 'Ethereal, surreal, calm',
+        colorPalette: 'Pale skin tones, soft blonde hair, stark black claws contrast'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Surreal, minimalist, high contrast between dark and light elements'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt29',
+    title: 'Preset 29',
+    img: prompt29Img,
+    tags: ['faceless'],
+    values: {
+      shot: {
+        composition: 'Medium shot of three moving figures side by side, central framing',
+        cameraSettings: 'Long exposure, slow shutter speed',
+        filmGrain: 'Fine grain, enhanced by motion blur'
+      },
+      lensEffects: {
+        optics: 'Light trails and streaking effect surrounding figures',
+        artifacts: 'Motion blur, light streak distortion',
+        depthOfField: 'Deep focus obscured by blur'
+      },
+      subject: {
+        description: 'Three human figures with indistinct facial features due to motion blur, wearing dark clothing',
+        wardrobe: 'Dark jackets with bright reflective or lit stripes creating streak patterns',
+        grooming: 'Indistinguishable due to blur'
+      },
+      scene: {
+        location: 'Abstract or studio-like setting with plain blue and beige background',
+        timeOfDay: 'Indeterminate due to stylized lighting',
+        environment: 'Minimalist, no distinct environmental elements'
+      },
+      visualDetails: {
+        action: 'Figures appear to be walking or moving quickly left to right',
+        props: 'None visible',
+        physics: 'Motion blur and light movement effects'
+      },
+      cinematography: {
+        lighting: 'Warm lighting enhancing reflections on jackets and faces',
+        tone: 'Dynamic, energetic, futuristic',
+        colorPalette: 'Deep blues, warm golds, blacks, and whites'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Abstract, motion blur photography with light streak effects, modern and energetic'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt30',
+    title: 'Preset 30',
+    img: prompt30Img,
+    tags: ['non-portrait'],
+    values: {
+      shot: {
+        composition: 'Close-up profile shot of dog\'s head, teeth fully bared, sharp focus on mouth',
+        cameraSettings: 'ISO 800, f/4, 1/125 s, medium zoom lens',
+        filmGrain: 'Moderate grain giving slightly vintage texture'
+      },
+      lensEffects: {
+        optics: 'Soft vignette at edges, sharp focus on teeth and collar',
+        artifacts: 'None noticeable',
+        depthOfField: 'Shallow, background blurred to emphasize head'
+      },
+      subject: {
+        description: 'Large black dog with mouth wide open showing exaggerated large sharp teeth',
+        wardrobe: 'Sparkling multi-row diamond-encrusted collar',
+        grooming: 'Shiny well-groomed black fur'
+      },
+      scene: {
+        location: 'Outdoors',
+        timeOfDay: 'Twilight or early night',
+        environment: 'Deep blue sky, dark silhouettes of landscape in background'
+      },
+      visualDetails: {
+        action: 'Dog snarling or growling with mouth wide open',
+        props: 'Diamond collar reflecting light',
+        physics: 'Teeth exaggeratedly large and sharp, realistic tongue and mouth interior'
+      },
+      cinematography: {
+        lighting: 'Low light with focused source illuminating dog\'s face and collar',
+        tone: 'Intense, dramatic, slightly surreal',
+        colorPalette: 'Dark blues, deep blacks, bright white and silver reflections on teeth and collar'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'High-contrast dramatic close-up, surreal fantasy horror style'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt31',
+    title: 'Preset 31',
+    img: prompt31Img,
+    values: {
+      shot: {
+        composition: 'Close-up centered headshot, eye-level, tight framing on face and upper shoulders',
+        cameraSettings: 'ISO 100, f/4.0, 85mm lens, sharp focus on face',
+        filmGrain: 'Fine grain, slight digital texture'
+      },
+      lensEffects: {
+        optics: 'Crisp lens with slight reflection on goggles, no distortion',
+        artifacts: 'None visible',
+        depthOfField: 'Shallow, focused on face and clothing textures'
+      },
+      subject: {
+        description: 'Young woman with flushed cheeks, neutral expression, wearing winter gear',
+        wardrobe: 'Cream fluffy fur-lined coat, blue knit beanie under blue hooded zip-up sweater with prominent red-and-white diamond zipper pulls, mirrored ski goggles above forehead',
+        grooming: 'Natural makeup, red cheeks from cold, light freckles'
+      },
+      scene: {
+        location: 'Studio with plain white background',
+        timeOfDay: 'Unknown, controlled indoor lighting',
+        environment: 'Minimalistic studio environment'
+      },
+      visualDetails: {
+        action: 'Subject staring directly at camera with subtle parted lips',
+        props: 'Ski goggles resting on head',
+        physics: 'Soft natural light creating gentle shadows on face and coat'
+      },
+      cinematography: {
+        lighting: 'Bright, diffused soft lighting from front, minimal shadows',
+        tone: 'Cool winter tones with warm skin highlights',
+        colorPalette: 'Cream, blue, red accents, light neutral background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Fashion editorial, clean, high-detail, winter-themed portrait'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt32',
+    title: 'Preset 32',
+    img: prompt32Img,
+    tags: ['faceless'],
+    values: {
+      shot: {
+        composition: 'Full-body side angle, subject centered, shoreline background with breaking waves',
+        cameraSettings: 'Medium focal length, likely 50-85mm, balanced exposure, natural light',
+        filmGrain: 'Soft digital texture, natural grain from lighting'
+      },
+      lensEffects: {
+        optics: 'Clear focus on subject, smooth background with slight motion blur in water',
+        artifacts: 'None',
+        depthOfField: 'Moderate depth allowing clear subject against wave details'
+      },
+      subject: {
+        description: 'Person standing barefoot on wet sand, arms extended, wearing a sheer veil over head, facing sideways',
+        wardrobe: 'Light cream loose button-up shirt, beige loose-fitting pants rolled at ankles, barefoot',
+        grooming: 'Shaved or closely cropped hair, veil partially obscuring face'
+      },
+      scene: {
+        location: 'Rocky or pebbly beach with waves crashing nearby',
+        timeOfDay: 'Late afternoon or early evening with soft diffused light',
+        environment: 'Windswept shoreline with active water movement and wet sand'
+      },
+      visualDetails: {
+        action: 'Subject subtly balancing on wet sand with waves splashing around feet, gently holding veil',
+        props: 'Sheer veil draped over head',
+        physics: 'Wave motion causing visible water splashes and wet sand reflections'
+      },
+      cinematography: {
+        lighting: 'Soft natural lighting, diffused, low contrast, directional from above or side',
+        tone: 'Serene, contemplative',
+        colorPalette: 'Muted earth tones, beige, cream, greens, grayish ocean blues'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Naturalistic, moody, minimalistic'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt33',
+    title: 'Preset 33',
+    img: prompt33Img,
+    values: {
+      shot: {
+        composition: 'Close-up portrait, centered subject with hands raised near face',
+        cameraSettings: 'Low key lighting, shallow depth of field, 85 mm lens, f/1.8, ISO 400, 1/125 s',
+        filmGrain: 'Slight grain enhancing texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and hands, soft background blur',
+        artifacts: 'None noticeable',
+        depthOfField: 'Shallow focusing on subject\'s face and wrapped hands'
+      },
+      subject: {
+        description: 'Female boxer with wet, dark curly hair partially obscuring face, intense gaze forward',
+        wardrobe: 'Boxing hand wraps in beige, branded "EVERLAST"',
+        grooming: 'Damp skin with sheen, natural makeup, hair wet and tousled'
+      },
+      scene: {
+        location: 'Studio style dark backdrop',
+        timeOfDay: 'Indeterminate',
+        environment: 'Controlled indoor lighting, dark background'
+      },
+      visualDetails: {
+        action: 'Subject holding fists up in defensive boxing pose',
+        props: 'Boxing hand wraps',
+        physics: 'Wet hair clinging to face, glistening skin from sweat or water'
+      },
+      cinematography: {
+        lighting: 'Dramatic low key, single light source highlighting facial contours and muscles',
+        tone: 'Intense, gritty, focused mood',
+        colorPalette: 'Muted earth tones, warm skin hues against dark background'
+      },
+      textElements: {
+        visibleText: '"EVERLAST" on hand wraps, clear and readable',
+        typography: 'Bold black font on white wrist label',
+        placement: 'Center of wrist wraps on both hands'
+      },
+      style: {
+        visualAesthetic: 'Realistic, raw, intimate sports portrait with moody atmosphere'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt34',
+    title: 'Preset 34',
+    img: prompt34Img,
+    tags: ['non-portrait'],
+    values: {
+      shot: {
+        composition: 'Centered medium shot, 35 mm lens, cat and turntable fill frame',
+        cameraSettings: 'ISO 400, f/4.5, 1/125 s, standard full-frame sensor',
+        filmGrain: 'Slight graininess, retro film texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on cat and turntable, soft background',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth of field at f/4.5, background softened'
+      },
+      subject: {
+        description: 'Cream-colored cat with pinkish ears wearing white-rimmed sunglasses and black headphones',
+        wardrobe: 'White-bordered oval sunglasses, over-ear black DJ headphones',
+        grooming: 'Clean, smooth coat, well-groomed'
+      },
+      scene: {
+        location: 'Indoor setting with green fabric backdrop',
+        timeOfDay: 'Neutral indoor lighting, no natural light',
+        environment: 'Controlled studio-like setup with minimal distractions'
+      },
+      visualDetails: {
+        action: 'Cat posed as if DJing, paws near green vinyl record on turntable',
+        props: 'Vintage pink turntable with green vinyl record',
+        physics: 'Static scene, no motion blur'
+      },
+      cinematography: {
+        lighting: 'Even soft light with mild shadow on cat\'s left side',
+        tone: 'Playful, retro',
+        colorPalette: 'Pastel pink, green, cream, black accents'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Retro pop art style, playful and nostalgic'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt35',
+    title: 'Preset 35',
+    img: prompt35Img,
+    tags: ['bw', 'male'],
+    values: {
+      shot: {
+        composition: 'Medium close-up, subject leaning back, centered, square crop',
+        cameraSettings: 'Low ISO for clarity, medium aperture for sharpness',
+        filmGrain: 'Fine grain typical of black and white portraiture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face, chest, and hands, smooth background',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth of field keeping subject sharp and background soft'
+      },
+      subject: {
+        description: 'Shirtless young man with short wavy hair, cigarette in mouth, intense gaze',
+        wardrobe: 'Dark pants partially visible',
+        grooming: 'Clean skin, slightly tousled hair, ear hoop earring'
+      },
+      scene: {
+        location: 'Indoor setting with plain vertical blinds or curtains in the background',
+        timeOfDay: 'Indeterminate, soft even lighting possibly natural light',
+        environment: 'Minimalistic interior with neutral backdrop'
+      },
+      visualDetails: {
+        action: 'Man reclining, holding a cigarette between lips',
+        props: 'Cigarette',
+        physics: 'Smoke slightly visible around cigarette tip'
+      },
+      cinematography: {
+        lighting: 'Soft diffused lighting highlighting muscles and facial features',
+        tone: 'Moody, contemplative black and white',
+        colorPalette: 'Grayscale monochrome'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Fine art black and white portrait with high contrast and texture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt36',
+    title: 'Preset 36',
+    img: prompt36Img,
+    tags: ['bw'],
+    values: {
+      shot: {
+        composition: 'Medium close-up, subject centered facing left in profile',
+        cameraSettings: 'ISO 400, f/4, 1/125s, 85mm',
+        filmGrain: 'Fine grain, classic black and white film texture'
+      },
+      lensEffects: {
+        optics: 'Soft focus on lace veil with sharp detail, slight vignette',
+        artifacts: 'None',
+        depthOfField: 'Shallow, background softly blurred'
+      },
+      subject: {
+        description: 'Woman with lace veil draped over head and shoulders, holding a seashell against chest, wearing white bottoms, natural skin tone',
+        wardrobe: 'Intricate white lace veil, white fabric bikini bottoms, coral bead necklace',
+        grooming: 'Natural makeup, closed eyes, relaxed expression'
+      },
+      scene: {
+        location: 'Outdoor rocky natural environment',
+        timeOfDay: 'Daylight, diffused soft lighting',
+        environment: 'Outdoor natural setting with blurred rock textures'
+      },
+      visualDetails: {
+        action: 'Woman holds seashell delicately against chest with right hand',
+        props: 'White seashell, coral bead necklace',
+        physics: 'Light filters softly through lace creating subtle shadows'
+      },
+      cinematography: {
+        lighting: 'Soft, diffuse daylight, high-key black and white contrast',
+        tone: 'Serene, ethereal, delicate mood',
+        colorPalette: 'Monochrome black and white'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Fine art black and white portraiture, minimalist, natural textures, ethereal elegance'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt37',
+    title: 'Preset 37',
+    img: prompt37Img,
+    tags: ['non-portrait'],
+    values: {
+      shot: {
+        composition: 'Mid-level close-up, metal and plastic objects centered on table',
+        cameraSettings: 'ISO 400, f/4.0, 1/125 s, standard lens',
+        filmGrain: 'Minimal, smooth texture'
+      },
+      lensEffects: {
+        optics: 'Clear sharp focus on all objects with slight reflections',
+        artifacts: 'None',
+        depthOfField: 'Deep focus, everything in sharp detail'
+      },
+      subject: {
+        description: 'Five dome-shaped shiny stainless steel containers with knob handles, stacked ice cream cones, stacked white disposable cups',
+        wardrobe: 'None applicable',
+        grooming: 'None applicable'
+      },
+      scene: {
+        location: 'Indoor countertop or serving station',
+        timeOfDay: 'Neutral ambient light, likely daytime',
+        environment: 'Clean, minimalistic, neutral gray wall background'
+      },
+      visualDetails: {
+        action: 'Station set up, no movement',
+        props: 'Plastic holders for cones and cups, metallic countertop, small tap or dispenser, yellowish small spoons in plastic tube',
+        physics: 'Reflections of overhead lights and surroundings on shiny metal surfaces'
+      },
+      cinematography: {
+        lighting: 'Soft and even diffuse light, no strong shadows',
+        tone: 'Neutral, utilitarian',
+        colorPalette: 'Metallic silver, beige cones, white cups, neutral gray background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Functional, modern, minimalistic'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt38',
+    title: 'Preset 38',
+    img: prompt38Img,
+    tags: ['bw'],
+    values: {
+      shot: {
+        composition: 'Two-panel diptych, full-body subject at center-right of left panel and center of right panel, chair in foreground on left in both panels',
+        cameraSettings: 'High contrast black and white, sharp focus, moderate depth of field',
+        filmGrain: 'Fine grain adding classic film texture'
+      },
+      lensEffects: {
+        optics: 'Moderate focal length with slight wide-angle effect',
+        artifacts: 'None',
+        depthOfField: 'Deep focus keeping subject and chair sharp'
+      },
+      subject: {
+        description: 'Female model with short hair wearing a beret, loose white blouse, tie, and ruched high-waist pants',
+        wardrobe: 'White blouse with rolled-up sleeves, black tie, grey ruched pants, black high-heeled shoes, black beret',
+        grooming: 'Short bob haircut, dark lipstick'
+      },
+      scene: {
+        location: 'Minimalist studio with white walls and polished concrete floor',
+        timeOfDay: 'Indeterminate natural or soft artificial lighting',
+        environment: 'Sparse and clean background emphasizing subject and chair'
+      },
+      visualDetails: {
+        action: 'Model in dynamic poses balancing on one leg with the other leg lifted and extended behind or to the side',
+        props: 'Simple wooden swivel chair with metal base',
+        physics: 'Balance and motion suggested by legs lifted and arms positioned for stability'
+      },
+      cinematography: {
+        lighting: 'Soft even light creating minimal shadows, high-key effect for clarity',
+        tone: 'Artistic, stylish, and modern black-and-white fashion editorial',
+        colorPalette: 'Monochrome black, white, gray shades'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Minimalist black and white fashion photography with dynamic posing and clean composition'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt39',
+    title: 'Preset 39',
+    img: prompt39Img,
+    tags: ['bw'],
+    values: {
+      shot: {
+        composition: 'Low-angle medium close-up, subject centered crouching, minimalist backdrop',
+        cameraSettings: 'ISO 400, f/4, 1/125s, monochrome mode, full-frame sensor',
+        filmGrain: 'Fine grain, classic black and white aesthetic'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and boots, slight softness on background',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth of field highlighting subject details, blurred floor and background'
+      },
+      subject: {
+        description: 'Young woman crouching, tousled short wavy hair, intense gaze with winged eyeliner, slightly parted lips',
+        wardrobe: 'Strapless corset top, long knit skirt, tied long black scarf wrapping around neck and trailing down',
+        grooming: 'Flawless skin with natural texture, bold makeup accentuating eyes and lips, polished nails'
+      },
+      scene: {
+        location: 'Plain studio with seamless white background and floor',
+        timeOfDay: 'Indeterminate studio lighting',
+        environment: 'Minimalist, controlled setting with no visible furniture or props'
+      },
+      visualDetails: {
+        action: 'Crouching pose with arms wrapped around legs, holding boots, scarf trailing on floor',
+        props: 'None besides clothing and accessories',
+        physics: 'Natural fabric draping, slight movement implied by hair and scarf positioning'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused key light from front-left, subtle shadows for depth',
+        tone: 'High-contrast monochrome emphasizing texture and form',
+        colorPalette: 'Black and white with rich tonal range from deep blacks to bright whites'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'High fashion editorial, classic monochrome photography, elegant yet edgy vibe'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt40',
+    title: 'Preset 40',
+    img: prompt40Img,
+    tags: ['non-portrait'],
+    values: {
+      shot: {
+        composition: 'Close-up overhead, white salad bowl centered, second bowl top left partially shown',
+        cameraSettings: 'ISO 400, f/4.0, 1/125s, 35 mm lens, natural lighting',
+        filmGrain: 'None, crisp digital clarity'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on main bowl, slight soft blur on background bowl',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth, main bowl fully sharp, background slightly blurred'
+      },
+      subject: {
+        description: 'White bowl filled with grilled corn, cherry tomatoes, shredded cheese, purple cabbage, guacamole ball with sesame seeds, roasted yellow squash cubes, leafy greens, creamy dressing topped with red spice in stainless cup',
+        wardrobe: 'None',
+        grooming: 'None'
+      },
+      scene: {
+        location: 'Outdoor table with floral-patterned tablecloth',
+        timeOfDay: 'Midday or early afternoon with strong sunlight',
+        environment: 'Bright floral print table surface with wildflower motifs'
+      },
+      visualDetails: {
+        action: 'Static food presentation',
+        props: 'Metal fork resting inside bowl, second bowl with visible lime wedge and carrots',
+        physics: 'Natural sunlight casting shadows of fork and bowl edges'
+      },
+      cinematography: {
+        lighting: 'Strong direct sunlight from upper left casting distinct shadows, warm tone',
+        tone: 'Vibrant, fresh, natural',
+        colorPalette: 'Bright greens, yellows, reds, and whites contrasted with dark fork and purple cabbage, floral patterned background with multiple colors'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Realistic, bright food photography focused on freshness and detail'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt41',
+    title: 'Preset 41',
+    img: prompt41Img,
+    values: {
+      shot: {
+        composition: 'Soft-focus close-up portrait, face and hand centered, blurred edges',
+        cameraSettings: 'Low aperture for shallow focus, ISO moderate, subdued lighting',
+        filmGrain: 'Prominent vintage grain, soft texture, slight color fringing'
+      },
+      lensEffects: {
+        optics: 'Soft lens blur, slight chromatic aberration around edges',
+        artifacts: 'Minor film scratches and dust visible',
+        depthOfField: 'Very shallow, only parts of face and fingers in slight focus'
+      },
+      subject: {
+        description: 'Young woman with dark hair wearing a spiked headband, bold winged eyeliner, gold hoop earrings',
+        wardrobe: 'Bare-shouldered or strapless, emphasizing face and hand',
+        grooming: 'Dark nails, glossy lips, smooth skin, dramatic eye makeup'
+      },
+      scene: {
+        location: 'Indeterminate neutral background',
+        timeOfDay: 'Indoor, artificial diffuse light',
+        environment: 'Plain, minimalistic'
+      },
+      visualDetails: {
+        action: 'Woman touching lips thoughtfully with elongated manicured nails',
+        props: 'Spiked headband, gold earrings',
+        physics: 'Soft shadows, muted contrasts, delicate light falloff'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused frontal lighting',
+        tone: 'Muted, warm vintage tones with subtle highlights',
+        colorPalette: 'Warm beige skin tones, dark hair, gold accents, subtle green tint'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Vintage film photography, soft focus portrait, glamorous and mysterious vibe'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt42',
+    title: 'Preset 42',
+    img: prompt42Img,
+    tags: ['non-portrait'],
+    values: {
+      shot: {
+        composition: 'Eye-level medium shot, 85 mm lens, dog centered reclining on chair',
+        cameraSettings: 'ISO 400, f/4, 1/125 s, full-frame sensor',
+        filmGrain: 'Fine grain, soft highlights'
+      },
+      lensEffects: {
+        optics: 'Pin-sharp focus on dog\'s face and body, subtle background blur',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth, f/4 producing gentle bokeh behind chair and table'
+      },
+      subject: {
+        description: 'Large Borzoi dog with white and gray long wavy fur, relaxed pose, expressive eyes looking at camera',
+        wardrobe: 'None',
+        grooming: 'Well-groomed, fluffy and shiny coat, natural'
+      },
+      scene: {
+        location: 'Classic vintage interior, elegant living or sitting room',
+        timeOfDay: 'Late afternoon with soft natural light',
+        environment: 'Indoor, floral wallpaper background, olive green heavy drape curtain to left'
+      },
+      visualDetails: {
+        action: 'Dog comfortably lying sideways on ornate cushioned antique chair with wooden frame',
+        props: 'Ornate upholstered chair with floral pattern, wooden side table with books and glass decanter',
+        physics: 'Soft natural light casting mild shadows and highlights on dog\'s fur and chair'
+      },
+      cinematography: {
+        lighting: 'Soft diffused natural or artificial light from left side, warm low-key ambiance',
+        tone: 'Warm, cozy, classic and calm mood',
+        colorPalette: 'Muted greens, beige, rich brown wood tones, soft whites and grays of dog fur, deep reds and greens in wallpaper'
+      },
+      textElements: {
+        visibleText: 'Book spine text reading "VRINTEN"',
+        typography: 'Serif font on book spine, small size',
+        placement: 'On wooden side table behind dog'
+      },
+      style: {
+        visualAesthetic: 'Vintage portrait photography with painterly quality, warm and inviting atmosphere'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt43',
+    title: 'Preset 43',
+    img: prompt43Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Profile medium close-up, subject facing right, head and upper torso visible, white background',
+        cameraSettings: 'High ISO 800, f/4.0, 85 mm lens, sharp focus on subject',
+        filmGrain: 'Minimal grain, smooth digital finish'
+      },
+      lensEffects: {
+        optics: 'Crisp details on face, chain, and sunglasses, slight reflection on lenses',
+        artifacts: 'None noticeable',
+        depthOfField: 'Shallow depth of field, background completely blurred'
+      },
+      subject: {
+        description: 'Muscular light-skinned man with short mohawk styled in upward spikes, wearing futuristic silver-framed blue mirrored sunglasses, small hoop and dangling flame earrings on left ear, trimmed sideburns and beard',
+        wardrobe: 'None visible, nude upper body, chunky silver chain necklace with large links',
+        grooming: 'Well-defined facial hair, closely cropped sides of head, styled top hair spikes'
+      },
+      scene: {
+        location: 'Studio with white backdrop',
+        timeOfDay: 'Indeterminate due to studio lighting',
+        environment: 'Clean, minimalistic, neutral'
+      },
+      visualDetails: {
+        action: 'Static pose, head turned slightly downward and right, intense facial expression',
+        props: 'Silver chain necklace, metallic blue mirrored sunglasses, flame-shaped earrings',
+        physics: 'Hair spikes rigidly shaped upward, reflecting light'
+      },
+      cinematography: {
+        lighting: 'High-key soft lighting from front and side, no harsh shadows, even illumination',
+        tone: 'Cool and assertive',
+        colorPalette: 'Natural skin tones, metallic silvers, vibrant royal blue lens'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Futuristic punk with cyberpunk influences, clean studio portrait'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt44',
+    title: 'Preset 44',
+    img: prompt44Img,
+    values: {
+      shot: {
+        composition: 'Medium close-up, slightly off-center with floating insects, asymmetrical framing',
+        cameraSettings: 'Low light, slow shutter for motion blur, f/2.8 and ISO 800, full-frame sensor',
+        filmGrain: 'Fine grain adding texture, subtle noise in shadows'
+      },
+      lensEffects: {
+        optics: 'Soft focus with motion blur effect, ghosting of face features, slight chromatic aberration',
+        artifacts: 'Double exposure effect creating duplicated face and eyes glow',
+        depthOfField: 'Shallow depth of field, background fully blurred'
+      },
+      subject: {
+        description: 'Female figure with long dark disheveled hair, two overlapping translucent faces with glowing eyes, expressionless',
+        wardrobe: 'Bare-shouldered nude appearance without visible clothing',
+        grooming: 'Loose hair strands, pale complexion with bluish tint'
+      },
+      scene: {
+        location: 'Indeterminate dark studio or abstract space',
+        timeOfDay: 'Night or low ambient light setting',
+        environment: 'Moody, shadowy, ethereal atmosphere, blue-purple gradient background'
+      },
+      visualDetails: {
+        action: 'Static pose, ethereal motion blur on face',
+        props: 'Three detailed flying insects (flies or moths) near head and shoulder',
+        physics: 'Light bending around translucent face layers, glowing eyes effect, slight motion trails'
+      },
+      cinematography: {
+        lighting: 'Low-key lighting with cool blue and purple hues, soft shadows, eye glow highlights',
+        tone: 'Mysterious and surreal, otherworldly ambiance',
+        colorPalette: 'Deep blues, dark purples, black shadows, muted skin tones'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Surreal, ethereal, dark art photography with digital manipulation'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt45',
+    title: 'Preset 45',
+    img: prompt45Img,
+    values: {
+      shot: {
+        composition: 'Close-up, tilted angle, two female faces mirrored, hands in foreground',
+        cameraSettings: 'High ISO for grain effect, narrow aperture, soft focus',
+        filmGrain: 'Prominent grain texture, vintage film style'
+      },
+      lensEffects: {
+        optics: 'Slight soft focus with film noise, low contrast',
+        artifacts: 'Visible grain and retro artifacting',
+        depthOfField: 'Shallow, focus mostly on hands and portions of faces'
+      },
+      subject: {
+        description: 'Two overlapping female faces with long dark hair, pale skin, soft features',
+        wardrobe: 'Pearl necklace with cross pendant, dark clothing',
+        grooming: 'Natural makeup, neatly styled hair partially obscuring faces'
+      },
+      scene: {
+        location: 'Indeterminate dark or studio background',
+        timeOfDay: 'Night or low light setting',
+        environment: 'Minimalist, dark ambiance'
+      },
+      visualDetails: {
+        action: 'One hand raised near face with long nails gently touching, hair partially covering faces',
+        props: 'Pearl necklace with cross pendant',
+        physics: 'Subtle motion blur on hair strands and hand'
+      },
+      cinematography: {
+        lighting: 'Low key, green tint color grading, directional soft light',
+        tone: 'Moody, mysterious, ethereal',
+        colorPalette: 'Dominantly greenish-blue with dark shadows'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Film noir, vintage grainy, surreal and intimate mood'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt46',
+    title: 'Preset 46',
+    img: prompt46Img,
+    tags: ['non-portrait'],
+    values: {
+      shot: {
+        composition: 'Centered square photograph with visible folds and tears, subject moderately framed',
+        cameraSettings: 'None applicable (scanned photo)',
+        filmGrain: 'Old photo grain, scratches, wear prominent'
+      },
+      lensEffects: {
+        optics: 'Static image of a printed photo, no lens effects',
+        artifacts: 'Physical damage, creases, and torn edges on photo',
+        depthOfField: 'Entire photo in focus'
+      },
+      subject: {
+        description: 'Man standing with arms crossed on rooftop terrace, cityscape background',
+        wardrobe: 'Dark short-sleeve top, light-colored trousers, belt',
+        grooming: 'Short dark hair, clean-shaven'
+      },
+      scene: {
+        location: 'Rooftop terrace with tiled floor and low wall, urban environment with trees and buildings in distance',
+        timeOfDay: 'Daytime with soft natural light',
+        environment: 'Clear sky, outdoor urban setting'
+      },
+      visualDetails: {
+        action: 'Man poses stoically, arms crossed',
+        props: 'Rooftop lamp attached to low wall, tiles on terrace floor',
+        physics: 'Photo is creased, torn, with worn and ripped corners, lay on textured fabric background'
+      },
+      cinematography: {
+        lighting: 'Soft natural daylight, shadows subtle',
+        tone: 'Monochrome sepia-toned aged photo with high contrast in midtones',
+        colorPalette: 'Sepia, beige, off-white, grayscale variations'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Vintage, nostalgic, worn photograph on fabric surface'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt47',
+    title: 'Preset 47',
+    img: prompt47Img,
+    tags: ['faceless'],
+    values: {
+      shot: {
+        composition: 'Close-up portrait with front-facing subject, centered framing, tight crop around head and shoulders',
+        cameraSettings: 'ISO 400, f/4, 85mm focal length, sharp focus on face',
+        filmGrain: 'Smooth digital texture, minimal grain'
+      },
+      lensEffects: {
+        optics: 'Crisp detail on facial features and fabric textures',
+        artifacts: 'None',
+        depthOfField: 'Shallow, blurred background'
+      },
+      subject: {
+        description: 'Person with black-painted face, white tears designs from eyes, white pupil-less eyes, long white wavy hair covered with thick white wool hood',
+        wardrobe: 'Thick textured green garment with a cracked pattern, heavy wool hood covering head',
+        grooming: 'Hair styled naturally flowing from hood, lips painted black'
+      },
+      scene: {
+        location: 'Studio with white seamless or isolated background',
+        timeOfDay: 'Neutral artificial lighting',
+        environment: 'Controlled indoor'
+      },
+      visualDetails: {
+        action: 'Subject gazes slightly downward, still pose',
+        props: 'None',
+        physics: 'Soft shadows on right side of face'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused frontal light emphasizing texture and shadow on face',
+        tone: 'Mysterious, dramatic',
+        colorPalette: 'High contrast between black face, white hair and hood, muted green clothing'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Surreal, gothic fantasy, high contrast theatrical makeup and costume'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt48',
+    title: 'Preset 48',
+    img: prompt48Img,
+    tags: ['non-portrait', 'faceless'],
+    values: {
+      shot: {
+        composition: 'Medium shot, subject centered, vertical orientation',
+        cameraSettings: 'ISO 400, f/4.0, 1/125 s, natural light',
+        filmGrain: 'Slight organic grain for texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on subject, soft background blur',
+        artifacts: 'None',
+        depthOfField: 'Moderate depth, isolating subject from forest background'
+      },
+      subject: {
+        description: 'Person with long hair obscured by face-covering made of long hanging fringes, head adorned with large, semicircular headdress made of wheat or dried grasses',
+        wardrobe: 'Traditional garment with embroidered red and white patterns on skirt, beige blouse with wide sleeves, knitted cream scarf around waist, wheat sheaf gloves covering hands',
+        grooming: 'Long brown hair flowing beneath face covering, natural hair texture'
+      },
+      scene: {
+        location: 'Dense forest edge with dark green foliage and grassy meadow',
+        timeOfDay: 'Late afternoon or overcast for soft, diffused lighting',
+        environment: 'Quiet, natural, slightly shadowed woodland'
+      },
+      visualDetails: {
+        action: 'Subject standing still, hands crossed holding wheat sheaves, facing camera',
+        props: 'Large wheat/grain headdress, wheat gloves, embroidered textile elements',
+        physics: 'Natural light, no visible movement'
+      },
+      cinematography: {
+        lighting: 'Soft ambient lighting, minimal shadows',
+        tone: 'Earthy, muted colors with natural warmth',
+        colorPalette: 'Deep greens, beige, brown, cream, muted reds'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Ethnographic, folkloric, moody natural portraiture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt49',
+    title: 'Preset 49',
+    img: prompt49Img,
+    values: {
+      shot: {
+        composition: 'Eye-level medium close-up, subject centered crouching on sandy beach, rocks and waves in background',
+        cameraSettings: 'ISO 400, f/2.8, 1/125s, 85mm lens',
+        filmGrain: 'None, clean digital image'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on subject\'s face and upper body, soft background',
+        artifacts: 'None noticeable',
+        depthOfField: 'Shallow depth, blurred rocks and waves'
+      },
+      subject: {
+        description: 'Young woman with fair skin, red-brown hair slicked back with multiple silver hair clips, looking over shoulder towards camera with neutral expression',
+        wardrobe: 'Fitted grey sleeveless dress with darker grey ombré effect at hem',
+        grooming: 'Smooth complexion, natural makeup, black nail polish on nails, silver earrings and rings'
+      },
+      scene: {
+        location: 'Sandy beach with large rocky formations and green foliage in background, ocean waves crashing',
+        timeOfDay: 'Daytime, diffused natural light',
+        environment: 'Calm beach with wet sand near waterline, rocks partially covered in moss or algae'
+      },
+      visualDetails: {
+        action: 'Woman crouching closely to sand with arms wrapped around knees',
+        props: 'None',
+        physics: 'Wet sand around feet, slight water reflections'
+      },
+      cinematography: {
+        lighting: 'Soft, natural, even daylight with slight overcast or shade',
+        tone: 'Neutral, serene mood',
+        colorPalette: 'Muted earth tones, greys, greens, skin tones, whites'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Contemporary naturalistic portrait, minimalistic aesthetics with focus on subject and environment'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt50',
+    title: 'Preset 50',
+    img: prompt50Img,
+    tags: ['bw'],
+    values: {
+      shot: {
+        composition: 'Close-up portrait, face centered but slightly tilted, tight crop emphasizing face and hair',
+        cameraSettings: 'High ISO, likely f/2.8 or wider aperture, slow shutter speed causing motion blur',
+        filmGrain: 'Heavy visible grain texture enhancing gritty aesthetic'
+      },
+      lensEffects: {
+        optics: 'Soft focus with significant blur on edges, sharpness compromised by motion',
+        artifacts: 'Motion blur and grain noise',
+        depthOfField: 'Shallow depth of field focused mostly on central facial area'
+      },
+      subject: {
+        description: 'Young female face with partially closed eyes and slightly parted lips, hair partially obscuring face and blowing across it',
+        wardrobe: 'Dark clothing barely visible, portion of textured fabric on lower right suggesting layered or patterned garment',
+        grooming: 'Loose hair strands framing face, natural look with no strong makeup evident'
+      },
+      scene: {
+        location: 'Indeterminate, solid black background',
+        timeOfDay: 'Indeterminate, high contrast suggests artificial lighting',
+        environment: 'Minimalist studio-like setting or generic dark backdrop'
+      },
+      visualDetails: {
+        action: 'Subject in motion or camera moved causing blur; hair appears to be blowing or moving across face',
+        props: 'None visible',
+        physics: 'Motion blur implies movement either of subject or camera during exposure'
+      },
+      cinematography: {
+        lighting: 'High-contrast, strong directional light illuminating face, creating stark highlights and deep shadows',
+        tone: 'Moody, abstract, intense monochrome black and white',
+        colorPalette: 'Monochrome grayscale, dominant whites and deep blacks'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Abstract, expressionist, gritty black and white photography with intentional blur and grain'
       }
     }
   }

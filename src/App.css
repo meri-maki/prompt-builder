@@ -34,3 +34,7 @@
 		padding: 12px !important;
 	}
 }
+
+.ant-collapse-header {
+	align-items: center !important;
+}

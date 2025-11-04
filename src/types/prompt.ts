@@ -19,4 +19,5 @@ export type FormValues = {
 }
 
 export type SectionDef = { key: keyof FormValues; label: string; fields: { key: string; label: string }[] }
-export type Preset = { id: string; title: string; img: string; values: FormValues }
+export type PresetTag = 'bw' | 'non-portrait' | 'faceless' | 'male'
+export type Preset = { id: string; title: string; img: string; values: FormValues; tags?: PresetTag[] }

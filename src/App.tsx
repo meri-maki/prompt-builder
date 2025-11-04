@@ -1,8 +1,8 @@
 import { useCallback, useMemo, useState } from 'react'
-import { Button, Card, Col, Collapse, Divider, Form, Input, Layout, Row, Space, Typography, Modal, Checkbox, FloatButton, App as AntdApp } from 'antd'
+import { Button, Card, Col, Collapse, Divider, Form, Input, Layout, Row, Space, Typography, Modal, Checkbox, FloatButton, App as AntdApp, Tag, Empty } from 'antd'
 import { useTranslation } from 'react-i18next'
 import './App.css'
-import type { FormValues, SectionDef, Preset } from './types/prompt'
+import type { FormValues, SectionDef, Preset, PresetTag } from './types/prompt'
 import { presets } from './presets/presets'
 import { CopyOutlined, DeleteOutlined, FileAddOutlined, GlobalOutlined, FileTextOutlined } from '@ant-design/icons'
 
@@ -35,6 +35,7 @@ const App = () => {
     'textElements',
     'style'
   ])
+  const [selectedFilterTags, setSelectedFilterTags] = useState<PresetTag[]>([])
 
   const toggleLanguage = useCallback(() => {
     const newLang = i18n.language === 'en' ? 'ru' : 'en'
@@ -118,6 +119,28 @@ const App = () => {
   )
 
   // presets are imported from ./presets/presets
+
+  const filteredPresets = useMemo(() => {
+    if (selectedFilterTags.length === 0) {
+      return presets
+    }
+    return presets.filter((preset) => {
+      return selectedFilterTags.every((tag) => preset.tags?.includes(tag))
+    })
+  }, [selectedFilterTags])
+
+  const toggleFilterTag = useCallback((tag: PresetTag) => {
+    setSelectedFilterTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    )
+  }, [])
+
+  const filterTags: { tag: PresetTag; label: string }[] = [
+    { tag: 'bw', label: 'BLACK&WHITE' },
+    { tag: 'non-portrait', label: 'NON-PORTRAIT' },
+    { tag: 'faceless', label: 'FACELESS' },
+    { tag: 'male', label: 'MALE' }
+  ]
 
   const applyPreset = useCallback((preset: Preset) => {
     form.setFieldsValue(preset.values)
@@ -264,6 +287,20 @@ const App = () => {
   const onReset = useCallback(() => {
     form.resetFields()
   }, [form])
+
+  const clearSection = useCallback((sectionKey: string) => {
+    const section = sections.find(s => s.key === sectionKey)
+    if (!section) return
+    
+    const fieldsToClear: Record<string, string> = {}
+    section.fields.forEach((field) => {
+      fieldsToClear[field.key] = ''
+    })
+    
+    form.setFieldsValue({
+      [sectionKey]: fieldsToClear
+    })
+  }, [form, sections])
 
   const handleRenderAndCopy = useCallback(async () => {
     const values = form.getFieldsValue(true) as FormValues
@@ -498,8 +535,20 @@ const App = () => {
                     {sections.map((section) => (
                       <Collapse.Panel 
                         key={section.key}
-                        header={<span style={{ fontSize: '20px', fontWeight: 600 }}>{section.label}</span>}
-                        style={{ marginBottom: 8, border: '1px solid #d9d9d9', borderRadius: 8 }}
+                        header={<Space style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}><span style={{ fontSize: '20px', fontWeight: 600 }}>{section.label}</span></Space>}
+                        extra={
+                          <Button 
+                            size="small" 
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              clearSection(section.key)
+                            }}
+                            style={{ fontSize: '14px' }}
+                          >
+                            {t('clear')}
+                          </Button>
+                        }
+                        style={{ marginBottom: 8,  border: '1px solid #d9d9d9', borderRadius: 8 }}
                       >
                         <Row gutter={[8, 4]}>
                           {section.fields.map((field) => (
@@ -532,41 +581,77 @@ const App = () => {
       </Layout>
 
       <Modal
-        title={<span style={{ fontSize: '24px', fontWeight: 600 }}>{t('imagePresets')}</span>}
+        title={
+          <div>
+            <div style={{ fontSize: '24px', fontWeight: 600, marginBottom: 16 }}>{t('imagePresets')}</div>
+            <Space style={{ width: '100%', flexWrap: 'wrap' }}>
+              {filterTags.map(({ tag, label }) => (
+                <Tag
+                  key={tag}
+                  onClick={() => toggleFilterTag(tag)}
+                  style={{
+                    cursor: 'pointer',
+                    padding: '4px 12px',
+                    fontSize: '14px',
+                    userSelect: 'none'
+                  }}
+                  color={selectedFilterTags.includes(tag) ? 'blue' : 'default'}
+                >
+                  {label}
+                </Tag>
+              ))}
+            </Space>
+          </div>
+        }
         open={!presetsCollapsed}
         onCancel={() => setPresetsCollapsed(true)}
         footer={null}
         width="100vw"
         style={{ top: 0, maxWidth: '100vw', paddingBottom: 0 }}
         styles={{
+          header: {
+            position: 'sticky',
+            top: 0,
+            zIndex: 10,
+            background: 'white',
+            borderBottom: '1px solid #f0f0f0',
+            paddingBottom: '16px'
+          },
           body: { 
-            maxHeight: 'calc(100vh - 110px)', 
+            maxHeight: 'calc(100vh - 200px)', 
             overflowY: 'auto',
             padding: '24px'
           }
         }}
       >
-        <Row gutter={[16, 16]} style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
-          {presets.map((p) => (
-            <Card
-              key={p.id}
-              hoverable
-              style={{ flex: '1 1 280px', minWidth: '280px', maxWidth: '400px' }}
-              cover={<img src={p.img} alt={p.title} style={{ width: '100%', aspectRatio: '3/4', objectFit: 'contain', backgroundColor: '#f0f0f0' }} />}
-              styles={{ body: { padding: 8 } }}
-            >
-              <Card.Meta title={<span style={{ fontSize: '16px', fontWeight: 500 }}>{p.title}</span>}/>
-              <Space style={{ marginTop: 12, width: '100%', justifyContent: 'space-between' }}>
-                <Button type="primary" onClick={() => applyPreset(p)} style={{ fontSize: '15px' }}>
-                  {t('copyAll')}
-                </Button>
-                <Button onClick={() => openChooseModal(p)} style={{ fontSize: '15px' }}>
-                  {t('options')}
-                </Button>
-              </Space>
-            </Card>
-          ))}
-        </Row>
+        {filteredPresets.length === 0 ? (
+          <Empty
+            description={<span style={{ fontSize: '16px', color: '#666' }}>No presets match the selected filters</span>}
+            style={{ margin: '60px 0' }}
+          />
+        ) : (
+          <Row gutter={[16, 16]} style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+            {filteredPresets.map((p) => (
+              <Card
+                key={p.id}
+                hoverable
+                style={{ flex: '1 1 280px', minWidth: '280px', maxWidth: '400px' }}
+                cover={<img src={p.img} alt={p.title} style={{ width: '100%', aspectRatio: '3/4', objectFit: 'contain', backgroundColor: '#f0f0f0' }} />}
+                styles={{ body: { padding: 8 } }}
+              >
+                <Card.Meta title={<span style={{ fontSize: '16px', fontWeight: 500 }}>{p.title}</span>}/>
+                <Space style={{ marginTop: 12, width: '100%', justifyContent: 'space-between' }}>
+                  <Button type="primary" onClick={() => applyPreset(p)} style={{ fontSize: '15px' }}>
+                    {t('copyAll')}
+                  </Button>
+                  <Button onClick={() => openChooseModal(p)} style={{ fontSize: '15px' }}>
+                    {t('options')}
+                  </Button>
+                </Space>
+              </Card>
+            ))}
+          </Row>
+        )}
       </Modal>
 
       <FloatButton
@@ -690,6 +775,45 @@ const App = () => {
           </Space>
         </Space>
       </Modal>
+
+      <Layout.Footer style={{ 
+        textAlign: 'center', 
+        padding: '16px',
+        background: '#f0f0f0',
+        borderTop: '1px solid #d9d9d9'
+      }}>
+        <Space>
+          <span style={{ fontSize: '14px', color: '#666' }}>
+            ❤️ Made by{' '}
+            <a 
+              href="https://t.me/inc_lementia" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: '#8e1305' }}
+            >
+              @inc_lementia
+            </a>
+          </span>
+          <span style={{ color: '#d9d9d9' }}>|</span>
+          <a 
+            href="https://boosty.to/inc_lementia" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ fontSize: '14px', color: '#8e1305' }}
+          >
+            Boosty
+          </a>
+          <span style={{ color: '#d9d9d9' }}>|</span>
+          <a 
+            href="https://www.instagram.com/inc_lementia" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ fontSize: '14px', color: '#8e1305' }}
+          >
+            Instagram
+          </a>
+        </Space>
+      </Layout.Footer>
     </Layout>
   )
 }
