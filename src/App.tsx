@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import './App.css'
 import type { FormValues, SectionDef, Preset, PresetTag } from './types/prompt'
 import { presets } from './presets/presets'
-import { CopyOutlined, DeleteOutlined, FileAddOutlined, GlobalOutlined, FileTextOutlined } from '@ant-design/icons'
+import { CopyOutlined, DeleteOutlined, FileAddOutlined, GlobalOutlined, FileTextOutlined, LockOutlined, UnlockOutlined } from '@ant-design/icons'
 
 const App = () => {
   const { t, i18n } = useTranslation()
@@ -36,6 +36,7 @@ const App = () => {
     'style'
   ])
   const [selectedFilterTags, setSelectedFilterTags] = useState<PresetTag[]>([])
+  const [lockedFields, setLockedFields] = useState<Set<string>>(new Set())
 
   const toggleLanguage = useCallback(() => {
     const newLang = i18n.language === 'en' ? 'ru' : 'en'
@@ -143,10 +144,30 @@ const App = () => {
   ]
 
   const applyPreset = useCallback((preset: Preset) => {
-    form.setFieldsValue(preset.values)
+    const valuesToApply: Partial<FormValues> = {}
+    Object.keys(preset.values).forEach((sectionKey) => {
+      const sectionValue = preset.values[sectionKey as keyof FormValues] as Record<string, string> | undefined
+      if (sectionValue) {
+        const section = sections.find(s => s.key === sectionKey)
+        if (section) {
+          const filteredSection: Record<string, string> = {}
+          section.fields.forEach((field) => {
+            const fieldPath = `${sectionKey}.${field.key}`
+            if (!lockedFields.has(fieldPath) && sectionValue[field.key]) {
+              filteredSection[field.key] = sectionValue[field.key]
+            }
+          })
+          if (Object.keys(filteredSection).length > 0) {
+            (valuesToApply as Record<string, unknown>)[sectionKey] = filteredSection
+          }
+        }
+      }
+    })
+    
+    form.setFieldsValue(valuesToApply as FormValues)
     message.success(t('presetApplied'))
     setPresetsCollapsed(true)
-  }, [form, t, message])
+  }, [form, t, message, sections, lockedFields])
 
   const openChooseModal = useCallback((preset: Preset) => {
     setSelectedPreset(preset)
@@ -159,9 +180,21 @@ const App = () => {
     
     const valuesToApply: Partial<FormValues> = {}
     selectedSections.forEach((sectionKey) => {
-      const sectionValue = selectedPreset.values[sectionKey as keyof FormValues]
+      const sectionValue = selectedPreset.values[sectionKey as keyof FormValues] as Record<string, string> | undefined
       if (sectionValue) {
-        (valuesToApply as Record<string, unknown>)[sectionKey] = sectionValue
+        const section = sections.find(s => s.key === sectionKey)
+        if (section) {
+          const filteredSection: Record<string, string> = {}
+          section.fields.forEach((field) => {
+            const fieldPath = `${sectionKey}.${field.key}`
+            if (!lockedFields.has(fieldPath) && sectionValue[field.key]) {
+              filteredSection[field.key] = sectionValue[field.key]
+            }
+          })
+          if (Object.keys(filteredSection).length > 0) {
+            (valuesToApply as Record<string, unknown>)[sectionKey] = filteredSection
+          }
+        }
       }
     })
     
@@ -169,7 +202,7 @@ const App = () => {
     message.success(t('presetApplied'))
     setModalVisible(false)
     setPresetsCollapsed(true)
-  }, [selectedPreset, selectedSections, form, t, message])
+  }, [selectedPreset, selectedSections, form, t, message, sections, lockedFields])
 
   const handleModalCancel = useCallback(() => {
     setModalVisible(false)
@@ -197,9 +230,21 @@ const App = () => {
     
     const valuesToApply: Partial<FormValues> = {}
     pasteSelectedSections.forEach((sectionKey) => {
-      const sectionValue = parsedData[sectionKey as keyof FormValues]
+      const sectionValue = parsedData[sectionKey as keyof FormValues] as Record<string, string> | undefined
       if (sectionValue) {
-        (valuesToApply as Record<string, unknown>)[sectionKey] = sectionValue
+        const section = sections.find(s => s.key === sectionKey)
+        if (section) {
+          const filteredSection: Record<string, string> = {}
+          section.fields.forEach((field) => {
+            const fieldPath = `${sectionKey}.${field.key}`
+            if (!lockedFields.has(fieldPath) && sectionValue[field.key]) {
+              filteredSection[field.key] = sectionValue[field.key]
+            }
+          })
+          if (Object.keys(filteredSection).length > 0) {
+            (valuesToApply as Record<string, unknown>)[sectionKey] = filteredSection
+          }
+        }
       }
     })
     
@@ -207,7 +252,7 @@ const App = () => {
     message.success(t('pasteSuccess'))
     setPasteModalVisible(false)
     setParsedData(null)
-  }, [parsedData, pasteSelectedSections, form, t, message])
+  }, [parsedData, pasteSelectedSections, form, t, message, sections, lockedFields])
 
   const handlePasteModalCancel = useCallback(() => {
     setPasteModalVisible(false)
@@ -288,19 +333,68 @@ const App = () => {
     form.resetFields()
   }, [form])
 
+  const toggleFieldLock = useCallback((sectionKey: string, fieldKey: string) => {
+    const fieldPath = `${sectionKey}.${fieldKey}`
+    setLockedFields(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(fieldPath)) {
+        newSet.delete(fieldPath)
+      } else {
+        newSet.add(fieldPath)
+      }
+      return newSet
+    })
+  }, [])
+
+  const lockAllInSection = useCallback((sectionKey: string) => {
+    const section = sections.find(s => s.key === sectionKey)
+    if (!section) return
+    
+    setLockedFields(prev => {
+      const newSet = new Set(prev)
+      section.fields.forEach((field) => {
+        newSet.add(`${sectionKey}.${field.key}`)
+      })
+      return newSet
+    })
+  }, [sections])
+
+  const unlockAllInSection = useCallback((sectionKey: string) => {
+    const section = sections.find(s => s.key === sectionKey)
+    if (!section) return
+    
+    setLockedFields(prev => {
+      const newSet = new Set(prev)
+      section.fields.forEach((field) => {
+        newSet.delete(`${sectionKey}.${field.key}`)
+      })
+      return newSet
+    })
+  }, [sections])
+
+  const unlockAll = useCallback(() => {
+    setLockedFields(new Set())
+  }, [])
+
   const clearSection = useCallback((sectionKey: string) => {
     const section = sections.find(s => s.key === sectionKey)
     if (!section) return
     
     const fieldsToClear: Record<string, string> = {}
     section.fields.forEach((field) => {
-      fieldsToClear[field.key] = ''
+      const fieldPath = `${sectionKey}.${field.key}`
+      if (!lockedFields.has(fieldPath)) {
+        fieldsToClear[field.key] = ''
+      }
     })
     
-    form.setFieldsValue({
-      [sectionKey]: fieldsToClear
-    })
-  }, [form, sections])
+    if (Object.keys(fieldsToClear).length > 0) {
+      const currentValues = form.getFieldValue(sectionKey as keyof FormValues) || {}
+      form.setFieldsValue({
+        [sectionKey as keyof FormValues]: { ...currentValues, ...fieldsToClear }
+      } as FormValues)
+    }
+  }, [form, sections, lockedFields])
 
   const handleRenderAndCopy = useCallback(async () => {
     const values = form.getFieldsValue(true) as FormValues
@@ -397,13 +491,33 @@ const App = () => {
         return
       }
       
-      // Apply all parsed data directly
-      form.setFieldsValue(found as FormValues)
+      // Apply all parsed data directly, skipping locked fields
+      const valuesToApply: Partial<FormValues> = {}
+      Object.keys(found).forEach((sectionKey) => {
+        const sectionValue = found[sectionKey as keyof FormValues] as Record<string, string> | undefined
+        if (sectionValue) {
+          const section = sections.find(s => s.key === sectionKey)
+          if (section) {
+            const filteredSection: Record<string, string> = {}
+            section.fields.forEach((field) => {
+              const fieldPath = `${sectionKey}.${field.key}`
+              if (!lockedFields.has(fieldPath) && sectionValue[field.key]) {
+                filteredSection[field.key] = sectionValue[field.key]
+              }
+            })
+            if (Object.keys(filteredSection).length > 0) {
+              (valuesToApply as Record<string, unknown>)[sectionKey] = filteredSection
+            }
+          }
+        }
+      })
+      
+      form.setFieldsValue(valuesToApply as FormValues)
       message.success(t('pasteSuccess'))
     } catch {
       message.error(t('pasteClipboardFailed'))
     }
-  }, [form, t, message])
+  }, [form, t, message, sections, lockedFields])
 
   const parseClipboardToFormPartial = useCallback(async () => {
     try {
@@ -532,45 +646,104 @@ const App = () => {
                     defaultActiveKey={sections.map(s => s.key)}
                     style={{ background: 'transparent', border: 'none' }}
                   >
-                    {sections.map((section) => (
-                      <Collapse.Panel 
-                        key={section.key}
-                        header={<Space style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}><span style={{ fontSize: '20px', fontWeight: 600 }}>{section.label}</span></Space>}
-                        extra={
-                          <Button 
-                            size="small" 
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              clearSection(section.key)
-                            }}
-                            style={{ fontSize: '14px' }}
-                          >
-                            {t('clear')}
-                          </Button>
-                        }
-                        style={{ marginBottom: 8,  border: '1px solid #d9d9d9', borderRadius: 8 }}
-                      >
-                        <Row gutter={[8, 4]}>
-                          {section.fields.map((field) => (
-                            <Col span={24} key={field.key}>
-                              <Form.Item 
-                                name={[section.key as string, field.key as string]} 
-                                label={<span style={{ fontSize: '16px', fontWeight: 500 }}>{field.label}</span>}
-                                style={{ marginBottom: 12 }}
+                    {sections.map((section) => {
+                      const sectionFields = section.fields.map(f => `${section.key}.${f.key}`)
+                      const allLocked = sectionFields.every(path => lockedFields.has(path))
+                      const someLocked = sectionFields.some(path => lockedFields.has(path))
+                      
+                      return (
+                        <Collapse.Panel 
+                          key={section.key}
+                          header={<Space style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}><span style={{ fontSize: '20px', fontWeight: 600 }}>{section.label}</span></Space>}
+                          extra={
+                            <Space>
+                              {someLocked && (
+                                <Button 
+                                  size="small" 
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    unlockAllInSection(section.key)
+                                  }}
+                                  style={{ fontSize: '14px' }}
+                                  icon={<UnlockOutlined />}
+                                >
+                                  {t('unlockAll')}
+                                </Button>
+                              )}
+                              {!allLocked && (
+                                <Button 
+                                  size="small" 
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    lockAllInSection(section.key)
+                                  }}
+                                  style={{ fontSize: '14px' }}
+                                  icon={<LockOutlined />}
+                                >
+                                  {t('lockAll')}
+                                </Button>
+                              )}
+                              <Button 
+                                size="small" 
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  clearSection(section.key)
+                                }}
+                                style={{ fontSize: '14px' }}
                               >
-                                <Input.TextArea
-                                  allowClear
-                                  showCount
-                                  autoSize={{ minRows: 2, maxRows: 6 }}
-                                  placeholder={`${field.label}...`}
-                                  style={{ fontSize: '15px' }}
-                                />
-                              </Form.Item>
-                            </Col>
-                          ))}
-                        </Row>
-                      </Collapse.Panel>
-                    ))}
+                                {t('clear')}
+                              </Button>
+                            </Space>
+                          }
+                          style={{ marginBottom: 8,  border: '1px solid #d9d9d9', borderRadius: 8 }}
+                        >
+                          <Row gutter={[8, 4]}>
+                            {section.fields.map((field) => {
+                              const fieldPath = `${section.key}.${field.key}`
+                              const isLocked = lockedFields.has(fieldPath)
+                              
+                              return (
+                                <Col span={24} key={field.key}>
+                                  <Form.Item 
+                                    name={[section.key as string, field.key as string]} 
+                                    label={
+                                      <Space style={{ width: '100%', justifyContent: 'space-between' }}>
+                                        <span style={{ fontSize: '16px', fontWeight: 500 }}>{field.label}</span>
+                                        <Button
+                                          type="text"
+                                          size="small"
+                                          icon={isLocked ? <LockOutlined /> : <UnlockOutlined />}
+                                          onClick={() => toggleFieldLock(section.key, field.key)}
+                                          style={{ 
+                                            color: isLocked ? '#ff4d4f' : '#8c8c8c',
+                                            padding: '0 4px'
+                                          }}
+                                        />
+                                      </Space>
+                                    }
+                                    style={{ marginBottom: 12 }}
+                                  >
+                                    <Input.TextArea
+                                      allowClear
+                                      showCount
+                                      autoSize={{ minRows: 2, maxRows: 6 }}
+                                      placeholder={`${field.label}...`}
+                                      style={{ fontSize: '15px' }}
+                                      disabled={isLocked}
+                                      onPaste={(e) => {
+                                        if (isLocked) {
+                                          e.preventDefault()
+                                        }
+                                      }}
+                                    />
+                                  </Form.Item>
+                                </Col>
+                              )
+                            })}
+                          </Row>
+                        </Collapse.Panel>
+                      )
+                    })}
                   </Collapse>
                 </Form>
               </Card>
@@ -657,7 +830,7 @@ const App = () => {
       <FloatButton
         icon={<FileAddOutlined style={{ }} />}
         onClick={parseClipboardToForm}
-        style={{ right: 24, bottom: 250 }}
+        style={{ right: 24, bottom: 320 }}
         shape="square"
         className='float-button'
         description={<span style={{ fontSize: '14px' }}>{t('paste')}</span>}
@@ -665,7 +838,7 @@ const App = () => {
       <FloatButton
         icon={<FileTextOutlined style={{ }} />}
         onClick={parseClipboardToFormPartial}
-        style={{ right: 24, bottom: 180}}
+        style={{ right: 24, bottom: 250}}
         shape="square"
         className='float-button'
         description={<span style={{ fontSize: '14px' }}>{t('partialPaste')}</span>}
@@ -673,7 +846,7 @@ const App = () => {
       <FloatButton
         icon={<DeleteOutlined style={{ color: '#ff4d4f'}} />}
         onClick={onReset}
-        style={{ right: 24, bottom: 110 }}
+        style={{ right: 24, bottom: 180 }}
         shape="square"
         className='float-button'
         description={<span style={{ fontSize: '14px' }}>{t('reset')}</span>}
@@ -682,11 +855,21 @@ const App = () => {
         icon={<CopyOutlined style={{ }} />}
         type="primary"
         onClick={handleRenderAndCopy}
-        style={{ right: 24, bottom: 40 }}
+        style={{ right: 24, bottom: 110 }}
         shape="square"
         className='float-button'
         description={<span style={{ fontSize: '14px' }}>{t('copy')}</span>}
       />
+      {lockedFields.size > 0 && (
+        <FloatButton
+          icon={<UnlockOutlined style={{ }} />}
+          onClick={unlockAll}
+          style={{ right: 24, bottom: 40 }}
+          shape="square"
+          className='float-button'
+          description={<span style={{ fontSize: '14px' }}>{t('unlockAll')}</span>}
+        />
+      )}
 
       <Modal
         title={<span style={{ fontSize: '20px' }}>{`${t('selectSections')} ${selectedPreset?.title || 'preset'}`}</span>}
@@ -819,3 +1002,4 @@ const App = () => {
 }
 
 export default App
+
