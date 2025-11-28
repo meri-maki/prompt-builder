@@ -276,6 +276,44 @@ const App = () => {
     }
   }, [pasteSelectedSections])
 
+  // English labels for output (always in English regardless of UI language)
+  const englishLabels = useMemo(() => ({
+    sections: {
+      shot: 'SHOT',
+      lensEffects: 'LENS EFFECTS',
+      subject: 'SUBJECT',
+      scene: 'SCENE',
+      visualDetails: 'VISUAL DETAILS',
+      cinematography: 'CINEMATOGRAPHY',
+      textElements: 'TEXT ELEMENTS',
+      style: 'STYLE',
+    },
+    fields: {
+      composition: 'Composition',
+      cameraSettings: 'Camera Settings',
+      filmGrain: 'Film Grain',
+      optics: 'Optics',
+      artifacts: 'Artifacts',
+      depthOfField: 'Depth of Field',
+      description: 'Description',
+      wardrobe: 'Wardrobe',
+      grooming: 'Grooming',
+      location: 'Location',
+      timeOfDay: 'Time of Day',
+      environment: 'Environment',
+      action: 'Action',
+      props: 'Props',
+      physics: 'Physics',
+      lighting: 'Lighting',
+      tone: 'Tone',
+      colorPalette: 'Color Palette',
+      visibleText: 'Visible Text',
+      typography: 'Typography',
+      placement: 'Placement',
+      visualAesthetic: 'Visual Aesthetic',
+    },
+  }), [])
+
   const buildOutput = useCallback((values: FormValues) => {
     const lines: string[] = []
     sections.forEach((section) => {
@@ -285,15 +323,17 @@ const App = () => {
       section.fields.forEach((field) => {
         const raw = sectionValue[field.key]
         if (raw && raw.trim()) {
-          bullets.push(`• ${field.label}: ${raw.trim()}`)
+          const englishFieldLabel = englishLabels.fields[field.key as keyof typeof englishLabels.fields] || field.key
+          bullets.push(`• ${englishFieldLabel}: ${raw.trim()}`)
         }
       })
       if (bullets.length > 0) {
-        lines.push(`${section.label}:  ${bullets.join('  ')}`)
+        const englishSectionLabel = englishLabels.sections[section.key as keyof typeof englishLabels.sections] || section.key
+        lines.push(`${englishSectionLabel}:  ${bullets.join('  ')}`)
       }
     })
     return lines.join('\n\n')
-  }, [sections])
+  }, [sections, englishLabels])
 
   const copyToClipboard = useCallback(async (text: string) => {
     try {
@@ -994,6 +1034,15 @@ const App = () => {
             style={{ fontSize: '14px', color: '#8e1305' }}
           >
             Instagram
+          </a>
+          <span style={{ color: '#d9d9d9' }}>|</span>
+          <a 
+            href="https://t.me/tribute/app?startapp=dAvp" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ fontSize: '14px', color: '#8e1305' }}
+          >
+            ⭐ Support
           </a>
         </Space>
       </Layout.Footer>

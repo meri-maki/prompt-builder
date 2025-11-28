@@ -49,6 +49,26 @@ import prompt47Img from '../assets/prompt47.png'
 import prompt48Img from '../assets/prompt48.png'
 import prompt49Img from '../assets/prompt49.png'
 import prompt50Img from '../assets/prompt50.png'
+import prompt51Img from '../assets/51.png'
+import prompt52Img from '../assets/52.png'
+import prompt53Img from '../assets/53.png'
+import prompt54Img from '../assets/54.png'
+import prompt55Img from '../assets/55.png'
+import prompt56Img from '../assets/56.png'
+import prompt57Img from '../assets/57.png'
+import prompt58Img from '../assets/58.png'
+import prompt59Img from '../assets/59.png'
+import prompt60Img from '../assets/60.png'
+import prompt61Img from '../assets/61.png'
+import prompt62Img from '../assets/62.png'
+import prompt63Img from '../assets/63.png'
+import prompt64Img from '../assets/64.png'
+import prompt65Img from '../assets/65.png'
+import prompt66Img from '../assets/66.png'
+import prompt67Img from '../assets/67.png'
+import prompt68Img from '../assets/68.png'
+import prompt69Img from '../assets/69.png'
+import prompt70Img from '../assets/70.png'
 
 export const presets: Preset[] = [
   {
@@ -2374,6 +2394,937 @@ export const presets: Preset[] = [
       },
       style: {
         visualAesthetic: 'Abstract, expressionist, gritty black and white photography with intentional blur and grain'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt51',
+    title: 'Preset 51',
+    img: prompt51Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Extreme close-up of face focusing on eyes and nose, lighter held near face',
+        cameraSettings: 'Low ISO for grainy texture, shallow depth of field, close focus distance',
+        filmGrain: 'Noticeable, warm grain adding texture to skin'
+      },
+      lensEffects: {
+        optics: 'Soft focus on background, sharp detail on lighter flame and facial features',
+        artifacts: 'None visible',
+        depthOfField: 'Very shallow, only the face and lighter flame in focus, background blurred'
+      },
+      subject: {
+        description: 'Young person with medium skin tone, dark hair partially covering face, intense gaze',
+        wardrobe: 'None visible',
+        grooming: 'Natural skin texture with slight shine and few blemishes visible'
+      },
+      scene: {
+        location: 'Indeterminate indoor setting',
+        timeOfDay: 'Night or dark environment illuminated primarily by lighter flame',
+        environment: 'Dark surroundings with warm orange light from flame'
+      },
+      visualDetails: {
+        action: 'Person holding a lighter close to face with flame lit',
+        props: 'Metal lighter with visible flame',
+        physics: 'Flame flickering, casting warm light and subtle shadows on face'
+      },
+      cinematography: {
+        lighting: 'Warm orange light from lighter flame highlighting face, dark shadows surround',
+        tone: 'Intimate, moody, intense',
+        colorPalette: 'Warm oranges and reds from flame, muted dark neutrals in background and hair'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Cinematic low-key portrait with dramatic warm lighting and intimate close crop'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt52',
+    title: 'Preset 52',
+    img: prompt52Img,
+    tags: ['bw', 'male'],
+    values: {
+      shot: {
+        composition: 'Extreme close-up centered face, full frontal, black background',
+        cameraSettings: 'High contrast, shallow depth of field, medium telephoto lens equivalent',
+        filmGrain: 'Fine grain black and white'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and sunglasses, blurred background',
+        artifacts: 'None',
+        depthOfField: 'Very shallow highlighting facial features'
+      },
+      subject: {
+        description: 'Person with short bleached hair, distorted nose pressing upward, mouth slightly open showing teeth',
+        wardrobe: 'Dark patterned scarf and garment with stripes and chains visible',
+        grooming: 'Short hair closely cropped, clean skin'
+      },
+      scene: {
+        location: 'Studio setting with black backdrop',
+        timeOfDay: 'Indeterminate',
+        environment: 'Controlled lighting environment'
+      },
+      visualDetails: {
+        action: 'Expression contorted, nose pinched upward by sunglasses',
+        props: 'Sleek black wraparound sunglasses covering eyes',
+        physics: 'Normal lighting and shadow play accentuating textures'
+      },
+      cinematography: {
+        lighting: 'High contrast studio lighting highlighting facial textures and shadows',
+        tone: 'Surreal, intense, a bit playful',
+        colorPalette: 'Monochrome grayscale black and white'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Avant-garde, edgy black and white portraiture with surreal facial distortion'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt53',
+    title: 'Preset 53',
+    img: prompt53Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Close-up centered portrait, tight framing on helmet and face, eye-level',
+        cameraSettings: 'ISO 400, f/4, 1/125s, neutral white balance',
+        filmGrain: 'Slight digital grain, minimal highlight bloom'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on helmet front and eye, slight reflection on visor',
+        artifacts: 'Scratches and scuff marks on helmet surface, cracked visor with jagged break',
+        depthOfField: 'Shallow depth, background fully blurred'
+      },
+      subject: {
+        description: 'Person wearing gray motorcycle helmet with large cracked area revealing intense eye',
+        wardrobe: 'Light gray knit sweater visible at neck and shoulders',
+        grooming: 'Curly dark hair visible through broken visor area'
+      },
+      scene: {
+        location: 'Studio environment with plain white background',
+        timeOfDay: 'Indeterminate, controlled studio lighting',
+        environment: 'Clean, minimalistic backdrop'
+      },
+      visualDetails: {
+        action: 'Stationary pose directly facing camera',
+        props: 'Motorcycle helmet with prominent crack and scratches',
+        physics: 'Cracked visor shows realistic glass fracture with fragmented edges'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused frontal light highlighting helmet contours and face with minimal shadows',
+        tone: 'Dramatic with high contrast emphasizing damage and facial expression',
+        colorPalette: 'Muted grays, soft whites, natural skin tones'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Realistic, raw, slightly gritty with focus on emotional intensity and texture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt54',
+    title: 'Preset 54',
+    img: prompt54Img,
+    values: {
+      shot: {
+        composition: 'Close-up low-angle portrait, subject centered, head and neck visible',
+        cameraSettings: 'High ISO for visible grain, shallow depth of field, sharp focus on face',
+        filmGrain: 'Noticeable grain texture, reminiscent of vintage film'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face, with slight halo from backlight',
+        artifacts: 'None',
+        depthOfField: 'Very shallow, background heavily blurred'
+      },
+      subject: {
+        description: 'Young woman with short brown hair, wet-look skin, shimmering eye makeup, slightly parted lips, single red glowing digital eye effect over right eye',
+        wardrobe: 'Black high-neck garment covering neck and shoulders',
+        grooming: 'Glossy lips, subtle highlight on cheekbones, natural skin texture'
+      },
+      scene: {
+        location: 'Studio setting with dark blue-black background',
+        timeOfDay: 'Night or artificially darkened interior',
+        environment: 'Minimalist, sterile, backlight focused for halo effect'
+      },
+      visualDetails: {
+        action: 'Model gazing slightly off camera with serious expression',
+        props: 'None',
+        physics: 'Light beam producing lens flare behind head'
+      },
+      cinematography: {
+        lighting: 'High-contrast backlight with cooler blue rim light and warm highlights on face, glowing red digital element on eye',
+        tone: 'Dramatic and futuristic with cinematic mood',
+        colorPalette: 'Deep blues, warm skin tones, black clothing, bright red digital light'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Cyberpunk-inspired portrait with cinematic lighting and digital glitch effect'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt55',
+    title: 'Preset 55',
+    img: prompt55Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Extreme close-up, off-center focused on face, close crop',
+        cameraSettings: 'High ISO, slow shutter for motion blur, shallow depth',
+        filmGrain: 'Strong grain, added noise for texture'
+      },
+      lensEffects: {
+        optics: 'Slight lens distortion with soft focus on edges',
+        artifacts: 'Motion blur, noise',
+        depthOfField: 'Very shallow, focusing mostly on nose and lips'
+      },
+      subject: {
+        description: 'Face of person with wet, shiny skin, dark wet hair clinging to forehead and face',
+        wardrobe: 'White sleeveless top visible at shoulder and neckline',
+        grooming: 'Wet hair, natural skin with sweat or water droplets visible'
+      },
+      scene: {
+        location: 'Indeterminate close-up studio or controlled environment',
+        timeOfDay: 'Indeterminate, artificial blue lighting',
+        environment: 'Blurred blue background, no specific elements'
+      },
+      visualDetails: {
+        action: 'Subject slightly leans forward or moves, causing motion blur',
+        props: 'None',
+        physics: 'Water droplets on skin reflect light, motion blur from subject movement'
+      },
+      cinematography: {
+        lighting: 'High contrast, cool blue tinted light, reflections on wet skin',
+        tone: 'Intense, dramatic, raw',
+        colorPalette: 'Cool blues, natural skin tones with shiny highlights'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Gritty, raw realism with artistic motion blur and grain texture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt56',
+    title: 'Preset 56',
+    img: prompt56Img,
+    values: {
+      shot: {
+        composition: 'Tight close-up, face filling frame, subject angled slightly to left',
+        cameraSettings: 'High-resolution, shallow depth of field',
+        filmGrain: 'Fine digital grain enhancing texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and hat, slight soft bokeh on background',
+        artifacts: 'None visible',
+        depthOfField: 'Very shallow, only face and hat in focus'
+      },
+      subject: {
+        description: 'Smiling young woman with freckled fair skin, blue eyes, natural makeup, joyful expression',
+        wardrobe: 'Bright red fuzzy hat and matching red and white fuzzy knit turtleneck sweater',
+        grooming: 'Natural skin texture with visible freckles, glossy red lipstick, minimal eye makeup'
+      },
+      scene: {
+        location: 'Studio with solid blue backdrop',
+        timeOfDay: 'Indeterminate artificial lighting',
+        environment: 'Indoor controlled setting'
+      },
+      visualDetails: {
+        action: 'Subject smiling directly at camera with slightly squinted eyes',
+        props: 'None',
+        physics: 'Soft texture visible on hat and sweater, smooth skin light reflection'
+      },
+      cinematography: {
+        lighting: 'Soft, even studio lighting emphasizing facial features and texture',
+        tone: 'Warm and vibrant with natural skin hues and rich reds',
+        colorPalette: 'Bold primary colors: vivid red, crisp white, deep blue background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Polished fashion portrait with a modern, clean, and fresh look'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt57',
+    title: 'Preset 57',
+    img: prompt57Img,
+    tags: ['bw', 'male', 'faceless'],
+    values: {
+      shot: {
+        composition: 'Tight medium rear view, centered, high contrast black-and-white, hands prominently framed against upper back',
+        cameraSettings: 'ISO 400, f/4, 1/125s, monochrome setting',
+        filmGrain: 'Fine grain, classic film texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on hands and back, subtle shadow contours',
+        artifacts: 'None noticeable',
+        depthOfField: 'Shallow to moderate, hands and back in sharp focus, smooth background blur'
+      },
+      subject: {
+        description: 'Muscular male figure shown from behind with head slightly lowered, arms raised and hands artistically posed with fingers spread and bent dramatically',
+        wardrobe: 'Sleeveless black top or undershirt, chain necklace',
+        grooming: 'Short-cropped hair, smooth skin tone'
+      },
+      scene: {
+        location: 'Studio with plain neutral background',
+        timeOfDay: 'Indeterminate, controlled studio lighting',
+        environment: 'Minimalist indoor setting'
+      },
+      visualDetails: {
+        action: 'Fingers elegantly curved and spread around head, creating expressive shapes',
+        props: 'None',
+        physics: 'Natural muscle tension and skin folds visible'
+      },
+      cinematography: {
+        lighting: 'Soft directional light from above and behind, strong shadows enhance texture and muscle definition',
+        tone: 'Monochrome gray scale, artistic, high contrast',
+        colorPalette: 'Black, white, and grayscale tones'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Fine art photography with an emphasis on form, anatomy, and expressive gesture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt58',
+    title: 'Preset 58',
+    img: prompt58Img,
+    values: {
+      shot: {
+        composition: 'Extreme close-up, wide-angle lens creating distorted facial features with subject centered',
+        cameraSettings: 'ISO 400, f/5.6, 24 mm lens, full-frame sensor',
+        filmGrain: 'Smooth digital finish with subtle texture on skin'
+      },
+      lensEffects: {
+        optics: 'Wide-angle distortion emphasizing forehead and nose size, sharp focus on face and glasses',
+        artifacts: 'None',
+        depthOfField: 'Deep focus, entire face and glasses in sharp detail'
+      },
+      subject: {
+        description: 'Dark-skinned person with short hair, large smooth forehead and pronounced facial features',
+        wardrobe: 'Black crew-neck shirt',
+        grooming: 'Natural skin texture, clean-shaven with slightly glossy lips'
+      },
+      scene: {
+        location: 'Indeterminate neutral background',
+        timeOfDay: 'Indeterminate studio lighting',
+        environment: 'Minimalistic studio environment'
+      },
+      visualDetails: {
+        action: 'Static pose looking downward and slightly forward',
+        props: 'Sleek silver futuristic wraparound sunglasses with black lenses reflecting studio lights',
+        physics: 'Natural shadows and highlights on face emphasizing skin texture'
+      },
+      cinematography: {
+        lighting: 'Soft overhead studio lighting creating subtle highlights and shadows',
+        tone: 'Modern, slightly surreal',
+        colorPalette: 'Monochrome dark brown skin tones, black clothing, silver-gray frames, light gray background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Futuristic portrait photography with surreal distortion and minimalist composition'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt59',
+    title: 'Preset 59',
+    img: prompt59Img,
+    values: {
+      shot: {
+        composition: 'Full-body portrait, model centered, large blurred face background fills frame',
+        cameraSettings: 'Shallow depth of field, soft focus on background, sharp on model',
+        filmGrain: 'Moderate grain effect enhancing texture'
+      },
+      lensEffects: {
+        optics: 'Shallow focus on model, background heavily blurred and enlarged',
+        artifacts: 'None noticeable',
+        depthOfField: 'Very narrow, model sharply focused against soft face shot background'
+      },
+      subject: {
+        description: 'Slim female model with long blonde hair, striking pose with arms raised above head',
+        wardrobe: 'Black leather bikini top, beige snakeskin-patterned pants with lace-up sides, beige platform heels',
+        grooming: 'Smooth skin, natural makeup emphasizing eyes, black beanie hat'
+      },
+      scene: {
+        location: 'Studio with printed or projected giant face backdrop',
+        timeOfDay: 'Studio lighting, time undetermined',
+        environment: 'Controlled indoor environment'
+      },
+      visualDetails: {
+        action: 'Model standing tall, legs slightly apart, arms raised touching head',
+        props: 'None',
+        physics: 'Realistic fabric textures with light reflections on leather and suede'
+      },
+      cinematography: {
+        lighting: 'Warm, directional light highlighting model\'s skin and fabric textures, soft shadows',
+        tone: 'Bold, high-contrast with warm orange and beige tones',
+        colorPalette: 'Black, beige, warm oranges, natural skin tones'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Contemporary fashion editorial with edgy, urban street style influence'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt60',
+    title: 'Preset 60',
+    img: prompt60Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Close-up profile portrait focusing on subject\'s face and shoulder, subject turned left',
+        cameraSettings: 'High shutter speed to capture detail, moderate depth of field, studio lighting',
+        filmGrain: 'Smooth, low grain, high detail'
+      },
+      lensEffects: {
+        optics: 'Crisp focus on subject\'s face and scorpion, soft background',
+        artifacts: 'None',
+        depthOfField: 'Shallow, isolating subject and scorpion sharply from background'
+      },
+      subject: {
+        description: 'Young man with slicked-back dark hair wearing clear oversized sunglasses, tongue extended licking a large black scorpion on his left shoulder',
+        wardrobe: 'None visible except clear glasses',
+        grooming: 'Slicked-back wet look hair, clean skin, natural makeup'
+      },
+      scene: {
+        location: 'Studio or neutral blank background',
+        timeOfDay: 'Indeterminate, artificial studio lighting',
+        environment: 'Plain light background with high contrast emphasizes subject and scorpion'
+      },
+      visualDetails: {
+        action: 'Man licking scorpion on shoulder, intense and unsettling',
+        props: 'Large black scorpion positioned on shoulder, transparent sunglasses',
+        physics: 'Tongue visibly touching scorpion, slight moisture on tongue'
+      },
+      cinematography: {
+        lighting: 'High contrast, side lighting from camera right creating shadows and defining facial features and neck muscles',
+        tone: 'Dark, edgy, surreal',
+        colorPalette: 'Muted skin tones, black scorpion, grayish transparent glasses, cool bluish-grey background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'High fashion editorial with dark surrealism and a slightly provocative mood'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt61',
+    title: 'Preset 61',
+    img: prompt61Img,
+    values: {
+      shot: {
+        composition: 'Close-up of hands holding irregular mirror piece reflecting face, off-center subject, shallow focus',
+        cameraSettings: 'Wide aperture for shallow depth, likely f/1.8 or f/2, moderate ISO, natural light',
+        filmGrain: 'Soft film grain, subtle, adds gentle vintage texture'
+      },
+      lensEffects: {
+        optics: 'Soft focus on hands, sharper focus on reflected face',
+        artifacts: 'None noticeable',
+        depthOfField: 'Shallow depth with foreground and background blur'
+      },
+      subject: {
+        description: 'Young woman with glossy lips, dark blue eyeshadow, large hoop earrings, strands of hair across face',
+        wardrobe: 'Dark top visible, silver bow-shaped ring on hand, dark nail polish',
+        grooming: 'Well-applied makeup with glossy lips and shimmering eyeshadow, styled hair partially loose'
+      },
+      scene: {
+        location: 'Interior, minimalistic plain background with neutral colors',
+        timeOfDay: 'Daytime with soft diffused natural or studio light',
+        environment: 'Clean, simple, focused on subject reflection'
+      },
+      visualDetails: {
+        action: 'Woman holding mirror piece reflecting part of her face, fingers gently framing mirror',
+        props: 'Small, irregular broken mirror piece',
+        physics: 'Reflection distorts face edges slightly, natural light soft shadows'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused, high key lighting with mild shadow',
+        tone: 'Dreamy, intimate, subtle muted palette with greenish-blue tint',
+        colorPalette: 'Pale blues, greens, muted skin tones, silver accents'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Contemporary fashion editorial with ethereal and surreal mood'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt62',
+    title: 'Preset 62',
+    img: prompt62Img,
+    tags: ['faceless'],
+    values: {
+      shot: {
+        composition: 'Close-up portrait centered',
+        cameraSettings: 'Shallow depth of field, low ISO, soft focus',
+        filmGrain: 'Minimal grain, smooth skin texture'
+      },
+      lensEffects: {
+        optics: 'Slightly blurred details due to fine hair waves',
+        artifacts: 'None',
+        depthOfField: 'Very shallow with background strongly blurred'
+      },
+      subject: {
+        description: 'Person with closed eyes and pale skin, features obscured by uniform wavy blonde hair cancellation',
+        wardrobe: 'White high-neck garment partially visible',
+        grooming: 'Hair styled in tight retro finger wave pattern completely covering face'
+      },
+      scene: {
+        location: 'Indeterminate, dark neutral background',
+        timeOfDay: 'Indeterminate, indoor lighting',
+        environment: 'Minimalist studio setting'
+      },
+      visualDetails: {
+        action: 'Subject appears still, serene',
+        props: 'None',
+        physics: 'Hair waves create visual distortion over face shapes'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused frontal light highlighting hair texture and face',
+        tone: 'Muted, dreamy',
+        colorPalette: 'Pale blonde, soft pink makeup, muted grays and whites'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Surreal, ethereal, fashion editorial'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt63',
+    title: 'Preset 63',
+    img: prompt63Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Medium shot, subject centered, frontal view, full torso visible',
+        cameraSettings: 'ISO 400, f/4.0, 1/125 s, natural light',
+        filmGrain: 'Moderate, slightly textured grain for a vintage effect'
+      },
+      lensEffects: {
+        optics: 'Slight soft focus on edges, sharp focus on face and torso',
+        artifacts: 'None',
+        depthOfField: 'Shallow depth of field with blurred white background'
+      },
+      subject: {
+        description: 'Young man with short black hair wearing large black headphones, neutral expression',
+        wardrobe: 'Light green loose oversized t-shirt over white long-sleeve shirt, brown pants with wide studded belt, light jacket tied around waist',
+        grooming: 'Natural skin tone, clean-shaven, neat hair'
+      },
+      scene: {
+        location: 'Studio setting with plain white backdrop',
+        timeOfDay: 'Indeterminate, controlled indoor lighting',
+        environment: 'Minimalistic, void of objects or background details'
+      },
+      visualDetails: {
+        action: 'Both hands adjusting headphones',
+        props: 'Over-ear black headphones with visible cable',
+        physics: 'No visible motion blur, slight fabric wrinkles and natural folds on clothing'
+      },
+      cinematography: {
+        lighting: 'Soft, diffuse studio lighting from front, no harsh shadows',
+        tone: 'Neutral and calm',
+        colorPalette: 'Muted greens, whites, browns, black headphones contrast'
+      },
+      textElements: {
+        visibleText: 'Partial text on shirt reading "HN"',
+        typography: 'Block lettering, small, subtle, partially obscured',
+        placement: 'Left chest area on t-shirt'
+      },
+      style: {
+        visualAesthetic: 'Contemporary fashion portrait with vintage texture and clean minimalist background'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt64',
+    title: 'Preset 64',
+    img: prompt64Img,
+    values: {
+      shot: {
+        composition: 'Low-angle close-up focusing on upper body and face, character centered',
+        cameraSettings: 'Digital-art style, simulated 35 mm focal length composition',
+        filmGrain: 'Subtle grain added for retro anime effect'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on character with high contrast highlights on metallic suit',
+        artifacts: 'Minimal digital noise, smooth shading',
+        depthOfField: 'Deep focus, entire character sharply rendered'
+      },
+      subject: {
+        description: 'Stylized anime female with long black and white hair, large expressive eyes, pouty lips, wearing a reflective chrome bodysuit',
+        wardrobe: 'Skin-tight, shiny metallic silver bodysuit covering entire torso and limbs, accentuating curves',
+        grooming: 'Smooth pale skin contrasted with bold black eyeliner and long eyelashes'
+      },
+      scene: {
+        location: 'Abstract, dark background with no visible environment',
+        timeOfDay: 'Indeterminate, studio lighting effect',
+        environment: 'Minimalistic void emphasizing character'
+      },
+      visualDetails: {
+        action: 'Character posed provocatively, leaning forward with hips angled toward viewer',
+        props: 'None visible',
+        physics: 'Reflective surfaces capturing ambient light realistically'
+      },
+      cinematography: {
+        lighting: 'High contrast, pinkish-purple rim lighting with reflective highlights on suit',
+        tone: 'Futuristic, seductive, edgy',
+        colorPalette: 'Metallic silvers, pale skin tones, black and white hair, dark background'
+      },
+      textElements: {
+        visibleText: 'none',
+        typography: 'none',
+        placement: 'none'
+      },
+      style: {
+        visualAesthetic: 'Retro anime meets cyber-futuristic glossy illustration with emphasis on sleek surfaces'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt65',
+    title: 'Preset 65',
+    img: prompt65Img,
+    tags: ['bw', 'non-portrait'],
+    values: {
+      shot: {
+        composition: 'High-angle crowded scene, many blurred figures overlapping with one central figure semi-visible',
+        cameraSettings: 'High ISO for grain, slow shutter speed to capture motion blur, monochrome sensor',
+        filmGrain: 'Heavy grain and noise simulating analog black-and-white film'
+      },
+      lensEffects: {
+        optics: 'Soft focus, intentional blurring from subject movement',
+        artifacts: 'None specific beyond film grain',
+        depthOfField: 'Shallow focus with most details obscured by blur'
+      },
+      subject: {
+        description: 'Numerous people indistinct due to motion blur, central figure in lighter clothing partially visible',
+        wardrobe: 'Light-colored shirts and jackets predominant, mostly formal or semi-formal attire',
+        grooming: 'Not discernible due to blur'
+      },
+      scene: {
+        location: 'Indeterminate crowded indoor or nighttime setting',
+        timeOfDay: 'Night or low-light environment',
+        environment: 'Dense crowd, tightly packed figures in motion'
+      },
+      visualDetails: {
+        action: 'Rapid movement of many people, dynamic blur effect',
+        props: 'None visible',
+        physics: 'Motion blur indicating movement and kinetic energy'
+      },
+      cinematography: {
+        lighting: 'Low key lighting creating high contrast black-and-white effect',
+        tone: 'Moody, mysterious, dynamic with strong grainy texture',
+        colorPalette: 'Monochrome black, white, and grays'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Abstract expressionist black-and-white photography emphasizing motion and texture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt66',
+    title: 'Preset 66',
+    img: prompt66Img,
+    values: {
+      shot: {
+        composition: 'Close-up portrait, low angle, subject centered with head tilted back',
+        cameraSettings: 'High contrast, shallow depth of field, low exposure',
+        filmGrain: 'Pronounced grain, textured and artistic'
+      },
+      lensEffects: {
+        optics: 'Soft focus on face edges, sharp focus on facial features',
+        artifacts: 'Film grain texture, no lens flare',
+        depthOfField: 'Shallow, face in focus, background and hair softly blurred'
+      },
+      subject: {
+        description: 'Woman with eyes closed, hair flowing sideways as if blown by wind, serene expression',
+        wardrobe: 'Not visible, silhouette effect',
+        grooming: 'Smooth skin with high gloss highlights on face'
+      },
+      scene: {
+        location: 'Studio or undefined background',
+        timeOfDay: 'Indeterminate, studio lighting',
+        environment: 'Minimalist, monochrome gradient background'
+      },
+      visualDetails: {
+        action: 'Hair flows dramatically to the left as if in motion',
+        props: 'None',
+        physics: 'Motion implied by hair movement'
+      },
+      cinematography: {
+        lighting: 'Blue gel lighting from front, shadows creating dramatic contrast',
+        tone: 'Moody, mysterious, ethereal',
+        colorPalette: 'Deep blues, black shadows, pale light background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'High contrast, cinematic, surreal portraiture'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt67',
+    title: 'Preset 67',
+    img: prompt67Img,
+    values: {
+      shot: {
+        composition: 'Close-up portrait, subject centered, tight crop on upper body and face',
+        cameraSettings: 'ISO 100, f/2.8, 85 mm lens, shallow depth',
+        filmGrain: 'Smooth, clean digital with slight natural texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and wreath, soft background',
+        artifacts: 'None',
+        depthOfField: 'Shallow with gentle bokeh'
+      },
+      subject: {
+        description: 'Young woman with pale skin, light blue eyes, slicked-back brown hair, neutral expression',
+        wardrobe: 'Thick knitted red turtleneck sweater oversized fit',
+        grooming: 'Minimal makeup, natural skin texture, subtle blush and lip gloss'
+      },
+      scene: {
+        location: 'Studio with plain light-colored backdrop',
+        timeOfDay: 'Indoor controlled lighting',
+        environment: 'Neutral, no additional elements'
+      },
+      visualDetails: {
+        action: 'Holding and slightly hugging a green fir wreath decorated with large red satin bow',
+        props: 'Christmas wreath with prominent red bow',
+        physics: 'Natural positioning of hands and wreath'
+      },
+      cinematography: {
+        lighting: 'Soft, even studio lighting from front and sides, neutral white balance',
+        tone: 'Calm, wintery, festive warmth',
+        colorPalette: 'Deep reds, forest green, pale skin tones, off-white background'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Modern fashion editorial with holiday theme, minimalistic background, cozy atmosphere'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt68',
+    title: 'Preset 68',
+    img: prompt68Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Profile close-up, subject centered, sharp silhouette against background',
+        cameraSettings: 'Low ISO, moderate aperture f/5.6, fast shutter speed',
+        filmGrain: 'Minimal grain, smooth finish'
+      },
+      lensEffects: {
+        optics: 'High contrast focus on profile edges, soft shadows',
+        artifacts: 'None',
+        depthOfField: 'Narrow depth, sharp on ear and hairstyle edges'
+      },
+      subject: {
+        description: 'Silhouette of head and shoulders with spiked mohawk hairstyle, dark skin tone highlighted in blue light, flower-shaped earrings',
+        wardrobe: 'None visible',
+        grooming: 'Clean skin texture highlighted by blue light, hair styled into prominent spikes'
+      },
+      scene: {
+        location: 'Studio setting with uniform matte background',
+        timeOfDay: 'Indeterminate, controlled lighting',
+        environment: 'Plain smooth backdrop, deep red color'
+      },
+      visualDetails: {
+        action: 'Static pose, head turned in strict profile',
+        props: 'Sparkling flower earrings on ear',
+        physics: 'Soft light reflections on skin and earrings'
+      },
+      cinematography: {
+        lighting: 'High contrast directional blue light on subject, deep red ambient background light',
+        tone: 'Dramatic, artistic, moody',
+        colorPalette: 'Dominant dark blues and deep reds'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'Stylized portrait with graphic silhouette and bold color blocking'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt69',
+    title: 'Preset 69',
+    img: prompt69Img,
+    values: {
+      shot: {
+        composition: 'Close-up portrait, subject centered, tight framing on face and neck',
+        cameraSettings: 'ISO 100, f/2.0, 85mm lens, full-frame sensor',
+        filmGrain: 'Minimal, smooth skin texture'
+      },
+      lensEffects: {
+        optics: 'Sharp focus on face and necklace, slight softening on hair edges',
+        artifacts: 'None',
+        depthOfField: 'Shallow, focused on face and necklace with blurred background'
+      },
+      subject: {
+        description: 'Asian woman, straight long black hair partially obscuring face, neutral expression',
+        wardrobe: 'None visible except layered gold and black chain necklace with a black-faced gold pendant',
+        grooming: 'Natural makeup, smooth skin, lips slightly parted'
+      },
+      scene: {
+        location: 'Studio with plain soft white background',
+        timeOfDay: 'Indeterminate indoor lighting',
+        environment: 'Minimalistic, clean background'
+      },
+      visualDetails: {
+        action: 'Still, hair partially covers face gently',
+        props: 'Gold and black chain necklace with octagonal black face pendant reading "CHANEL SWISS"',
+        physics: 'Hair slightly spread on shoulders, pendant hanging naturally'
+      },
+      cinematography: {
+        lighting: 'Soft, diffused, even front lighting with subtle shadows adding facial contour',
+        tone: 'Calm, muted, elegant',
+        colorPalette: 'Warm skin tones, deep black hair, gold and black jewelry, light gray background'
+      },
+      textElements: {
+        visibleText: '"CHANEL" and "SWISS" on pendant face in white uppercase',
+        typography: 'Sans serif small text, centered on pendant',
+        placement: 'Center of pendant'
+      },
+      style: {
+        visualAesthetic: 'Modern, minimalist fashion portrait, high-end jewelry focus'
+      }
+    }
+  }
+  ,
+  {
+    id: 'prompt70',
+    title: 'Preset 70',
+    img: prompt70Img,
+    tags: ['male'],
+    values: {
+      shot: {
+        composition: 'Close-up three-quarter profile of figure\'s head and shoulder, subject left, angled upward',
+        cameraSettings: 'High ISO, shallow depth of field, slow shutter speed implied',
+        filmGrain: 'Heavy grain, pronounced texture throughout image'
+      },
+      lensEffects: {
+        optics: 'Soft focus, slight glow on edges',
+        artifacts: 'Visible grain, light noise',
+        depthOfField: 'Shallow, background blurred to nearly solid dark teal'
+      },
+      subject: {
+        description: 'Human figure with closed eyes, stylized white skin with red accent shadows',
+        wardrobe: 'None visible, bare shoulder',
+        grooming: 'Smooth skin, bald or hair tightly covered'
+      },
+      scene: {
+        location: 'Studio-like setting',
+        timeOfDay: 'Timeless, artificial lighting',
+        environment: 'Dark teal-black gradient background'
+      },
+      visualDetails: {
+        action: 'Still, head tilted back slightly, serene expression',
+        props: 'None',
+        physics: 'Static'
+      },
+      cinematography: {
+        lighting: 'High-contrast, directional, cool and red-toned highlights',
+        tone: 'Ethereal, abstract, surreal',
+        colorPalette: 'Black, dark teal, stark white, vivid red'
+      },
+      textElements: {
+        visibleText: 'None',
+        typography: 'None',
+        placement: 'None'
+      },
+      style: {
+        visualAesthetic: 'High grain film effect, pop art influence, abstract portraiture'
       }
     }
   }
