@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState, useEffect } from 'react'
-import { Button, Card, Col, Collapse, Divider, Form, Input, Layout, Row, Space, Modal, Checkbox, FloatButton, App as AntdApp, Tag, Empty } from 'antd'
+import { Button, Card, Col, Collapse, Divider, Form, Input, Layout, Row, Space, Modal, Checkbox, FloatButton, App as AntdApp, Tag, Empty, Flex } from 'antd'
 import { useTranslation } from 'react-i18next'
 import type { FormValues, SectionDef, Preset, PresetTag } from '../../types/prompt'
 import { presets } from '../../presets/presets'
@@ -670,8 +670,8 @@ export const Builder = () => {
   return (
     <Layout style={{ width: '100%', flex: 1 }}>
       <Layout.Content style={{ padding: 0, paddingTop: 76, fontSize: '16px', width: '100%' }}>
-        <Col span={16} style={{ maxWidth: '100%', flex: 1 }}>
-            <Form form={form} layout="vertical" onFinish={onFinish} onValuesChange={handleFormValuesChange} initialValues={formData} autoComplete="off" size='middle' style={{ width: '100%' }}>
+        <Flex justify='center' align='center' style={{ maxWidth: '100%', flex: 1 }}  >
+            <Form form={form} layout="vertical" onFinish={onFinish} onValuesChange={handleFormValuesChange} initialValues={formData} autoComplete="off" size='middle' style={{ maxWidth: '1024px', width: '95%' }}>
               <Collapse 
                 defaultActiveKey={sections.map(s => s.key)}
                 style={{ background: 'transparent', border: 'none' }}
@@ -777,7 +777,7 @@ export const Builder = () => {
               </Collapse>
             </Form>
 
-        </Col>
+        </Flex>
       </Layout.Content>
 
       <Modal

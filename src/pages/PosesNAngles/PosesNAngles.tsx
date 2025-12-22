@@ -7,7 +7,7 @@ import { classNames } from '../../shared/lib/classNames/classNames'
 const { Title, Paragraph } = Typography
 
 // Import all pose images using Vite's glob import
-const poseImages = import.meta.glob('../../assets/poses/p*.png', { eager: true, as: 'url' }) as Record<string, string>
+const poseImages = import.meta.glob('../../assets/poses/p*.webp', { eager: true, as: 'url' }) as Record<string, string>
 
 const getPoseImage = (id: number): string => {
   // Find the image by matching the filename pattern
