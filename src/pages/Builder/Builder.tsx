@@ -23,6 +23,9 @@ export const Builder = () => {
   useEffect(() => {
     if (Object.keys(formData).length > 0) {
       form.setFieldsValue(formData as FormValues)
+    } else {
+      // Explicitly clear form when formData is empty
+      form.resetFields()
     }
   }, [form, formData])
   
@@ -392,8 +395,8 @@ export const Builder = () => {
   }, [form, setFormData])
 
   const onReset = useCallback(() => {
-    form.resetFields()
     resetForm()
+    form.resetFields()
   }, [form, resetForm])
 
   const toggleFieldLock = useCallback((sectionKey: string, fieldKey: string) => {

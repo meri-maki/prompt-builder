@@ -2,22 +2,16 @@ import { Layout, Card, Row, Col, Typography } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import cls from './Guides.module.scss'
 import { useTranslation } from 'react-i18next'
+import { guides } from './guidesData'
 
 const { Title } = Typography
-import PosesNAnglesImage from '../../assets/posesnangles.png'
+
+
 export const Guides = () => {
   const navigate = useNavigate()
 
   const { t } = useTranslation()
 
-  const guides = [
-    {
-      id: 'posesnangles',
-      title: "POSES'N'ANGLES",
-      description: t('posesnanglesDescription'),
-      image: PosesNAnglesImage
-    }
-  ]
 
   return (
     <Layout style={{ width: '100%', flex: 1 }}>
@@ -32,7 +26,7 @@ export const Guides = () => {
           </Title>
           
           <Row gutter={[24, 24]} className={cls.cardsContainer}>
-            {guides.map((guide) => (
+            {Object.values(guides).map((guide) => (
               <Col xs={24} sm={12} md={8} lg={6} key={guide.id}>
                 <Card
                   hoverable
@@ -42,7 +36,7 @@ export const Guides = () => {
                 >
                   <Card.Meta
                     title={<span className={cls.cardTitle}>{guide.title}</span>}
-                    description={<span className={cls.cardDescription}>{guide.description}</span>}
+                    description={<span className={cls.cardDescription}>{t(guide.description)}</span>}
                   />
                 </Card>
               </Col>

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import cls from './PosesNAngles.module.scss'
 import { classNames } from '../../shared/lib/classNames/classNames'
 import { getPoseImage, posesData } from './posesData'
+import { guides } from '../Guides/guidesData'
 
 const { Title, Paragraph } = Typography
 
@@ -81,6 +82,8 @@ export const PosesNAngles = () => {
               type="info"
               className={cls.descriptionAlert}
             />
+            <div className={cls.cont}>
+              <a href={guides['posesnangles'].fileLink} target="_blank" rel="noopener noreferrer">Download PDF</a>
             <div className={cls.sliderContainer}>
               <span className={cls.sliderLabel}>ZOOM</span>
               <Slider
@@ -98,6 +101,7 @@ export const PosesNAngles = () => {
                 }}
                 className={cls.slider}
               />
+            </div>
             </div>
           </div>
           

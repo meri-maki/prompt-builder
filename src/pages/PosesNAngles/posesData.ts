@@ -225,3 +225,4 @@ export const posesData = [
   { id: 72, text: 'Extreme close-up portrait shot, cropped from forehead to lips, presented with a 90-degree rotated orientation. Camera is positioned very close at face height, but the frame is turned so the face appears sideways across the image. Subject lies on the side with the head tilted into the frame, cheek slightly compressed. One hand lifts to the face, fingers resting across the lips and lower cheek, partially obscuring the mouth. Eyes look directly into the lens, gaze steady and intimate within the rotated composition.' }
 ]
 
+
