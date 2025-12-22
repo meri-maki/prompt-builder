@@ -1,0 +1,49 @@
+.content {
+  padding: 0;
+  padding-top: 76px;
+  font-size: 16px;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 24px;
+}
+
+.title {
+}
+
+.description {
+  margin-bottom: 48px !important;
+  //font-size: 18px;
+  color: #666;
+  //max-width: 800px;
+}
+
+.cardsContainer {
+  margin-top: 24px;
+}
+
+.card {
+  height: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #666;
+}
+
