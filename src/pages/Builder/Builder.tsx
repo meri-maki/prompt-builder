@@ -839,10 +839,16 @@ export const Builder = () => {
                 key={p.id}
                 hoverable
                 style={{ flex: '1 1 280px', minWidth: '280px', maxWidth: '400px' }}
-                cover={<img src={p.img} alt={p.title} style={{ width: '100%', aspectRatio: '3/4', objectFit: 'contain', backgroundColor: '#f0f0f0' }} />}
+                cover={
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    style={{ width: '100%', aspectRatio: '3/4', objectFit: 'contain', backgroundColor: '#f0f0f0' }}
+                  />
+                }
                 styles={{ body: { padding: 8 } }}
               >
-                <Card.Meta title={<span style={{ fontSize: '16px', fontWeight: 500 }}>{p.title}</span>}/>
+                <Card.Meta title={<span style={{ fontSize: '16px', fontWeight: 500 }}>{p.title}</span>} />
                 <Space style={{ marginTop: 12, width: '100%', justifyContent: 'space-between' }}>
                   <Button type="primary" onClick={() => applyPreset(p)} style={{ fontSize: '15px' }}>
                     {t('copyAll')}

@@ -6,7 +6,7 @@ import { classNames } from '../../shared/lib/classNames/classNames'
 import cls from './Header.module.scss'
 
 export const Header = () => {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const location = useLocation()
 
   const toggleLanguage = () => {
@@ -39,7 +39,7 @@ export const Header = () => {
               to="/guides" 
               className={classNames(cls.navLink, {}, [isGuidesActive ? cls.active : ''])}
             >
-              Guides
+              {t('guidesTitle')}
             </Link>
           </Space>
           <Space size={2}>

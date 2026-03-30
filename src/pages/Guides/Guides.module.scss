@@ -29,11 +29,30 @@
 .card {
   height: 100%;
   border-radius: 8px;
+  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Fixed 3:4 frame for guide card thumbnails; image fills via object-fit cover. */
+.cardCover {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 

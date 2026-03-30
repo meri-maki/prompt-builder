@@ -17,7 +17,7 @@ export const Guides = () => {
     <Layout style={{ width: '100%', flex: 1 }}>
       <Layout.Content className={cls.content}>
         <div className={cls.container}>
-          <Title level={2} className={cls.title}>Guides</Title>
+          <Title level={2} className={cls.title}>{t('guidesTitle')}</Title>
           <Title type='secondary' level={5} className={cls.description} >
             {t('guidesDescription')}
             <a href="https://t.me/+eHAQCdmU_EwyODA6" target="_blank" rel="noopener noreferrer">
@@ -30,7 +30,11 @@ export const Guides = () => {
               <Col xs={24} sm={12} md={8} lg={6} key={guide.id}>
                 <Card
                   hoverable
-                  cover={<img src={guide.image} alt={guide.title} />}
+                  cover={
+                    <div className={cls.cardCover}>
+                      <img src={guide.image} alt={guide.title} />
+                    </div>
+                  }
                   className={cls.card}
                   onClick={() => navigate(`/guides/${guide.id}`)}
                 >

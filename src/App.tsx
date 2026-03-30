@@ -4,6 +4,8 @@ import { Header } from './widgets/Header/Header'
 import { Builder } from './pages/Builder/Builder'
 import { Guides } from './pages/Guides/Guides'
 import { PosesNAngles } from './pages/PosesNAngles/PosesNAngles'
+import { MidjourneyProfiles } from './pages/MidjourneyProfiles/MidjourneyProfiles'
+import { GridPromptBuilder } from './pages/GridPromptBuilder/GridPromptBuilder'
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
           <Route path="/builder" element={<Builder />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/posesnangles" element={<PosesNAngles />} />
+          <Route path="/guides/midjourneyprofiles" element={<MidjourneyProfiles />} />
+          <Route path="/guides/gridprompt" element={<GridPromptBuilder />} />
         </Routes>
 
         <Layout.Footer style={{ 
@@ -47,12 +51,21 @@ const App = () => {
             </a>
             <span style={{ color: '#d9d9d9' }}>|</span>
             <a 
-              href="https://www.instagram.com/inc_lementia" 
+              href="https://www.youtube.com/@INC_LEMENTIA" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ fontSize: '14px', color: '#8e1305' }}
             >
-              Instagram
+              YouTube
+            </a>
+            <span style={{ color: '#d9d9d9' }}>|</span>
+            <a 
+              href="https://t.me/+eHAQCdmU_EwyODA6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ fontSize: '14px', color: '#8e1305' }}
+            >
+              Telegram
             </a>
             <span style={{ color: '#d9d9d9' }}>|</span>
             <a 

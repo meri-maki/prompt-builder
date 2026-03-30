@@ -48,6 +48,31 @@ h1 {
 	}
 }
 
+/* Scrollbars: white track + neutral thumb (not system accent) — WebKit + Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #d1d5db #ffffff;
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #d1d5db;
+	border-radius: 6px;
+	border: 2px solid #ffffff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #cbd5e1;
+}
+
 .presets-row {
 	-webkit-scrollbar-width: none;
 	-moz-scrollbar-width: none;

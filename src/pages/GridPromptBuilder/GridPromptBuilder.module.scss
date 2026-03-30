@@ -1,0 +1,363 @@
+/**
+ * Styles for the Grid Prompt Builder guide page.
+ * Includes the 2x2 slot grid, preset picker cards, and prompt output controls.
+ * Page chrome (content, header block, how-to Alert) aligns with PosesNAngles guide layout.
+ */
+.content {
+  padding: 0;
+  padding-top: 76px;
+  font-size: 16px;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  margin-bottom: 0 !important;
+  font-size: 48px !important;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 0 !important;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto !important;
+}
+
+.descriptionAlert {
+  text-align: left;
+
+  :global(.ant-alert-message) {
+    width: 100%;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.descriptionTitle {
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 4px;
+  color: #1890ff;
+  font-style: italic;
+}
+
+.descriptionItem {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.modalSourceFrameToggleRow {
+  display: flex;
+  justify-content: flex-end;
+  margin: -8px 0 8px;
+}
+
+.modalSourceFrameBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  max-height: min(45vh, 500px);
+  overflow-y: auto;
+}
+
+.modalSourceFrameText {
+  flex: 1;
+  min-width: 0;
+}
+
+.modalSourceFrameHeading {
+  display: block;
+  margin-bottom: 6px !important;
+  font-size: 14px;
+}
+
+.modalSourceFrameCaption {
+  margin-bottom: 0 !important;
+  font-size: 13px;
+}
+
+.modalSourceFrameImage {
+  flex-shrink: 0;
+  width: auto;
+  max-width: min(42%, 280px);
+  max-height: min(35vh, 320px);
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  display: block;
+  background: #fff;
+}
+
+.instructionLink {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-inline: auto;
+  width: min(100%, calc(300px * 2 + 12px));
+  box-sizing: border-box;
+}
+
+.slot {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.slot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border-color: #8e1305;
+}
+
+.slotEmpty {
+  border-style: dashed;
+  background: #fafafa;
+}
+
+.slotFilled {
+  border-style: solid;
+}
+
+.slotImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slotLabelWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0) 0%, rgba(17, 24, 39, 0.86) 100%);
+}
+
+.slotEmptyState {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+}
+
+.slotTitle {
+  font-size: 14px;
+  color: #fff;
+}
+
+.slotLabelWrap .slotPresetTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+.slotEmptyState .slotTitle {
+  color: #475569;
+}
+
+.slotChoose {
+  color: #8e1305;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.switchWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.globalStyleKeeper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.globalStyleKeeperHint {
+  font-size: 13px;
+}
+
+.globalStyleKeeperInput {
+  font-size: 14px;
+}
+
+.outputPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+
+.pickerSlotLabel {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.posesPickerWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.posesSearch {
+  max-width: 420px;
+}
+
+.posesPickerScroll {
+  max-height: 55vh;
+  overflow-y: auto;
+  padding-right: 4px;
+  padding-bottom: 1rem;
+}
+
+.presetPickerScroll {
+  max-height: min(52vh, 640px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+  margin-right: -2px;
+  padding-bottom: 1rem;
+}
+
+.posesGuideLink {
+  align-self: flex-start;
+  font-size: 14px;
+}
+
+.poseCardSnippet {
+  margin-bottom: 0 !important;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.presetCardButton {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Preset picker cards — match Image Presets modal in Builder (padding, contain preview, title size). */
+.presetCard {
+  border-radius: 10px;
+  overflow: hidden;
+
+  :global(.ant-card-body) {
+    padding: 8px;
+  }
+}
+
+.presetCardImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  background: #f0f0f0;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.presetCardTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+  color: rgba(0, 0, 0, 0.88);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px 28px;
+  }
+
+  .grid {
+    width: 100%;
+  }
+
+  .slot {
+    max-width: min(400px, 100%);
+  }
+}
