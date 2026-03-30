@@ -2,13 +2,13 @@
  * Data for the Midjourney Profiles (Personalization / --p) guide: card images and copy targets.
  * Each entry matches one moodboard from the Telegram post (one image → one --p code).
  */
-import mjHhyoaq9 from '../../assets/midjourney-profiles/mj-hhyoaq9.png'
-import mj1gjlbsu from '../../assets/midjourney-profiles/mj-1gjlbsu.png'
-import mjRisxthi from '../../assets/midjourney-profiles/mj-risxthi.png'
-import mjI2lcxpc from '../../assets/midjourney-profiles/mj-i2lcxpc.png'
-import mjZ6dfadn from '../../assets/midjourney-profiles/mj-z6dfadn.png'
-import mjT9fjmrz from '../../assets/midjourney-profiles/mj-t9fjmrz.png'
-import mjRma7exj from '../../assets/midjourney-profiles/mj-rma7exj.png'
+import mjHhyoaq9 from '../../assets/midjourney-profiles/mj-hhyoaq9.webp'
+import mj1gjlbsu from '../../assets/midjourney-profiles/mj-1gjlbsu.webp'
+import mjRisxthi from '../../assets/midjourney-profiles/mj-risxthi.webp'
+import mjI2lcxpc from '../../assets/midjourney-profiles/mj-i2lcxpc.webp'
+import mjZ6dfadn from '../../assets/midjourney-profiles/mj-z6dfadn.webp'
+import mjT9fjmrz from '../../assets/midjourney-profiles/mj-t9fjmrz.webp'
+import mjRma7exj from '../../assets/midjourney-profiles/mj-rma7exj.webp'
 
 /** Shared prompt used for all reference generations in the source post (no upscales / extra post). */
 export const midjourneyProfilesBasePrompt =

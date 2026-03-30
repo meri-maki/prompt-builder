@@ -1,6 +1,6 @@
 import PosesNAnglesImage from '../../assets/posesnangles.png'
-import MidjourneyProfilesImage from '../../assets/midjourney-profiles/midjourney-beauty-profiles-cover.png'
-import GridPromptCover from '../../assets/grid/gridprompt-cover.png'
+import MidjourneyProfilesImage from '../../assets/midjourney-profiles/midjourney-beauty-profiles-cover.webp'
+import GridPromptCover from '../../assets/grid/gridprompt-cover.webp'
 
 export const guides: Record<string, { id: string; title: string; description: string; image: string; fileLink: string }> = {
   posesnangles: {

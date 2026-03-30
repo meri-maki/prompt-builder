@@ -229,7 +229,8 @@ const main = async () => {
     if (!arrayBody) {
         process.stdout.write(`Presets array not found in: ${inputPath}\n`);
         process.stdout.write(`Expected something like: export const presets = [ ... ]\n`);
-        process.exit(1);
+        // Ensure `arrayBody` is narrowed for TS even if `process.exit` isn't treated as `never`.
+        throw new Error('Presets array not found');
     }
 
     const blocks = extractTopLevelObjectBlocks(arrayBody);
